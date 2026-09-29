@@ -1,0 +1,21 @@
+name: qwen3_1p7b_base_sft554
+group: teacher_training
+driver: models/teacher_training/train_sft.sh
+note: Direct-code SFT of Qwen3-1.7B-Base; the step-554 checkpoint is the SFT-554 student. Build the data first with data_prep/build_sft_code_data.py.
+env:
+  MODEL_PATH: ${MODEL_ROOT}/qwen3_1p7b_base_chat
+  DATA_DIR: ${OUTPUT_ROOT}/sft_code_data
+  OUTPUT_DIR: ${OUTPUT_ROOT}/teacher_training/qwen3_1p7b_base_sft554
+  LR: 3e-6
+  LR_SCHEDULER: cosine
+  WARMUP_RATIO: '0.03'
+  TBS: '128'
+  MAX_LEN: '4096'
+  MAX_TOKEN_LEN: '8192'
+  SP: '1'
+  EPOCHS: '1'
+  SEED: '1'
+  RESUME_MODE: auto
+  NNODES: '1'
+  NPROC_PER_NODE: '8'
+  WANDB_EXPERIMENT: opd-code-sft-v2-pilot

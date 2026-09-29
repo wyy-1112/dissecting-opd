@@ -1,0 +1,27 @@
+name: code_grpo400_qwen3_1p7b
+group: teacher_training
+driver: models/teacher_training/train_grpo_code400.sh
+note: Code GRPO-400 teacher (1.7B). GRPO from the Qwen3-1.7B-Base SFT-554 student over Open-R1 verifiable Python problems.
+env:
+  MODEL: ${MODEL_ROOT}/qwen3_1p7b_base_sft554
+  TOKENIZER: ${MODEL_ROOT}/qwen3_1p7b_base_chat
+  TRAIN_FILE: ${REPO_ROOT}/data/pools/openr1_code.parquet
+  VAL_FILE: ${REPO_ROOT}/data/val/openr1_code_dev.parquet
+  REWARD_FN: ${REPO_ROOT}/opd/rewards/code_reward.py
+  OUTPUT_DIR: ${OUTPUT_ROOT}/teacher_training/code_grpo400_qwen3_1p7b
+  TRAIN_BATCH_SIZE: '128'
+  PPO_MINI_BATCH_SIZE: '128'
+  ROLLOUT_N: '8'
+  TOTAL_EPOCHS: '8'
+  TOTAL_TRAINING_STEPS: '400'
+  ACTOR_LR: 5e-7
+  MAX_PROMPT_LENGTH: '4096'
+  MAX_RESPONSE_LENGTH: '4096'
+  REWARD_WORKERS: '4'
+  SAVE_FREQ: '50'
+  TEST_FREQ: '25'
+  VAL_BEFORE_TRAIN: 'True'
+  RESUME_MODE: auto
+  NNODES: '4'
+  NPROC_PER_NODE: '8'
+  WANDB_EXPERIMENT: stage1-554-direct-openr1

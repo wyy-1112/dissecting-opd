@@ -1,0 +1,245 @@
+{
+  "base_checkpoint": {
+    "fingerprint": "0a3438958f3529d0cf3c9491325c43f66cbd3b46cce859c2891572dc249c7755",
+    "path": "/path/to/opd-code/data/models/opd_deepseek_r1_light_r1_7b/student_deepseek_r1_distill_qwen_7b"
+  },
+  "cohort": {
+    "chosen_tokens": 130414,
+    "path": "/path/to/opd-code/data/opd/function_space_geometry_light_r1_7b_v1/cohort/cohort.jsonl",
+    "records": 128,
+    "sha256": "0805853e69812f34a1d7358eb7598953d2701d15671e8960fcbc223fd8422d9c"
+  },
+  "exact_token_contract": "Every checkpoint is scored on the stored prompt_token_ids and response_token_ids; no scoring-time tokenization is permitted.",
+  "manifest_payload_sha256": "e9c3ffd2217dd20a8f05e47d2558a6bbf9d8b6449febcbe9538fc7f005300969",
+  "schema_version": "opd_function_space_probe_manifest_v1",
+  "selection": {
+    "domain_chosen_tokens": {
+      "gpqa": 32768,
+      "humaneval_plus": 32363,
+      "livecodebench_v6": 32515,
+      "math": 32768
+    },
+    "domain_distinct_prompts": {
+      "gpqa": 32,
+      "humaneval_plus": 32,
+      "livecodebench_v6": 32,
+      "math": 32
+    },
+    "domain_records": {
+      "gpqa": 32,
+      "humaneval_plus": 32,
+      "livecodebench_v6": 32,
+      "math": 32
+    },
+    "max_response_tokens": 1024,
+    "max_sequence_tokens": 2048,
+    "per_domain": 32,
+    "policy": "sha256-ranked; maximize distinct prompts before selecting additional trajectories from a prompt",
+    "required_domains": [
+      "math",
+      "gpqa",
+      "humaneval_plus",
+      "livecodebench_v6"
+    ],
+    "seed": 20260914
+  },
+  "sources": [
+    {
+      "adapter": "math_eval",
+      "candidates": 1920,
+      "domain": "math",
+      "source": {
+        "files": [
+          {
+            "bytes": 18416502,
+            "name": "aime24.jsonl",
+            "sha256": "6267dc359c7e37f77db0cb3d2a7eddaa36f120533b67020f11eac1f4287cf11a"
+          },
+          {
+            "bytes": 20308594,
+            "name": "aime25.jsonl",
+            "sha256": "59526ecddaf752d813f1ff3fe3d7a64ce66941c262a392d35584afe11951161f"
+          },
+          {
+            "bytes": 23828288,
+            "name": "hmmt25_feb.jsonl",
+            "sha256": "19768947c7f7771f39693c30338d6bf21f15210a46d643830ce3227f906bd6f5"
+          },
+          {
+            "bytes": 22347420,
+            "name": "hmmt25_nov.jsonl",
+            "sha256": "8e566956d3a9d5a8e2e303752cbb78ff3920824b8e739ee7cfe48cdf674eb90e"
+          }
+        ],
+        "fingerprint": "bbefb327ef15a2ce3705ab17ab3d424afbc7561d75421f733ca359bb684ee545",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/deepseek_r1_distill_qwen_7b_baseline_eval_v1_math/deepseek_r1_distill_qwen_7b/eval_outputs"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1584,
+      "domain": "gpqa",
+      "source": {
+        "files": [
+          {
+            "bytes": 6639910,
+            "name": "shard_0.jsonl",
+            "sha256": "e375feb47330d47cc42046cd8c9c2623a1b0472cdd3c8fdb96f928af69ae59cd"
+          },
+          {
+            "bytes": 5941278,
+            "name": "shard_1.jsonl",
+            "sha256": "414b7cb0e3ada1bc935191b4c6daad77e3a2ce36ed686fe79be9b9ee5854b904"
+          },
+          {
+            "bytes": 6351187,
+            "name": "shard_2.jsonl",
+            "sha256": "b99dc4b3e3fa330f675c573db9c0b0c99f9b27a4b8eb6f11a4dba969cb3b606b"
+          },
+          {
+            "bytes": 5356754,
+            "name": "shard_3.jsonl",
+            "sha256": "617ad2e36aaabaa07821e0844dae8c7d785f5d878025c1bc2131c8adafb09422"
+          },
+          {
+            "bytes": 6051120,
+            "name": "shard_4.jsonl",
+            "sha256": "19307af2f6fc93d18cad9732226c6e7ffaf05eef571c8a45e4a65f974d13da6d"
+          },
+          {
+            "bytes": 5763724,
+            "name": "shard_5.jsonl",
+            "sha256": "f8f8e7002c714a181d597e2191c61f8f25f4beb84af72af470028f277cfe2a7d"
+          },
+          {
+            "bytes": 5379621,
+            "name": "shard_6.jsonl",
+            "sha256": "a71e25d638ef19a85196a3d06951f0cf70a365210ce3887e93ee2a84948dfe69"
+          },
+          {
+            "bytes": 5094699,
+            "name": "shard_7.jsonl",
+            "sha256": "32d2fa98a9230dd0786628662dfff435284555494cb0b8758a48c172a8753f60"
+          }
+        ],
+        "fingerprint": "e3520ea638e03e21574da39a03411db2f750b45296205051ae6e51e152efb9e8",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/deepseek_r1_distill_qwen_7b_baseline_eval_v1/deepseek_r1_distill_qwen_7b/gpqa_diamond"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1312,
+      "domain": "humaneval_plus",
+      "source": {
+        "files": [
+          {
+            "bytes": 472829,
+            "name": "evalplus_samples.jsonl",
+            "sha256": "f7a6193e2a3d6bc2fe3bde08f3fe250c9f7137830e542d8cc997595c20ae415a"
+          },
+          {
+            "bytes": 1963036,
+            "name": "shard_0.jsonl",
+            "sha256": "736d50c4a3efb766880cf4637dee3e2135af25d1c1bbe6807755bd567e812696"
+          },
+          {
+            "bytes": 2862832,
+            "name": "shard_1.jsonl",
+            "sha256": "f73a53cd1ebef8989a0bb767959a57fcfda3c9d0b56846f059694947a41ad1cc"
+          },
+          {
+            "bytes": 2023504,
+            "name": "shard_2.jsonl",
+            "sha256": "ab19175ec301589a22d60911d92270e4721130545bc61325d4f8da63bc852d99"
+          },
+          {
+            "bytes": 2083528,
+            "name": "shard_3.jsonl",
+            "sha256": "f08f58a2ab63aaec42652b6a14b34888b4d9a8f7fb52b48881a62227955dd4d1"
+          },
+          {
+            "bytes": 3042880,
+            "name": "shard_4.jsonl",
+            "sha256": "4a5aa19e52d4e4a72e1f83a832ab89dd7f59acd684f79ae80bd2c6c39c8fdf82"
+          },
+          {
+            "bytes": 1666497,
+            "name": "shard_5.jsonl",
+            "sha256": "2ec798c65f7b33da6dda6c553f841ecca268f7495de8615021839692312da9d5"
+          },
+          {
+            "bytes": 2824849,
+            "name": "shard_6.jsonl",
+            "sha256": "d3524edea5db7a6878c1918fca26154240b0bd179ba2e29dcea11d84549cd400"
+          },
+          {
+            "bytes": 1838894,
+            "name": "shard_7.jsonl",
+            "sha256": "77c9b9bd79be28635f4d0c4ba39265d07c509173d0ec8e76db5b78891edfa73c"
+          }
+        ],
+        "fingerprint": "c301ff665cc4ce6dd2c6920ec1c098dba67a5150ee5c2341db867a5e86a9bbfa",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/deepseek_r1_distill_qwen_7b_baseline_eval_v1/deepseek_r1_distill_qwen_7b/humaneval_plus"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1400,
+      "domain": "livecodebench_v6",
+      "source": {
+        "files": [
+          {
+            "bytes": 6822557,
+            "name": "shard_0.jsonl",
+            "sha256": "23f7355a1ec38450115bdd4ee9d47432c5e455a4b372b2341fe3d6113b372d2d"
+          },
+          {
+            "bytes": 7986135,
+            "name": "shard_1.jsonl",
+            "sha256": "446e29f9fa35d08347b05f3775db2bc1119d8ae69a3483773511dbc6df7688e6"
+          },
+          {
+            "bytes": 7679728,
+            "name": "shard_2.jsonl",
+            "sha256": "6bdaec8975cc2865631a0a353c7fb89feb534d61eaa3891244cf77b359df48bd"
+          },
+          {
+            "bytes": 8130202,
+            "name": "shard_3.jsonl",
+            "sha256": "29be04531b332de30f95ba326e0901bf3f05f24d327945415ae0e343e8b0e975"
+          },
+          {
+            "bytes": 7356588,
+            "name": "shard_4.jsonl",
+            "sha256": "3ea865acc97f80b9775a6fb78ab2228c8325c0059eb47308e8b791ece1643fe3"
+          },
+          {
+            "bytes": 8663471,
+            "name": "shard_5.jsonl",
+            "sha256": "58ae183f880f500c9891a89d347bf1cb6b2642dfe0ab061cb81a5b94338ccecd"
+          },
+          {
+            "bytes": 8052572,
+            "name": "shard_6.jsonl",
+            "sha256": "b094da5de3855f4e9089d1671e493571de3956ec7dd952edb57fe911a13b9802"
+          },
+          {
+            "bytes": 8254591,
+            "name": "shard_7.jsonl",
+            "sha256": "2a1864ed4069484e080eb1e89f64e9965993ce3d4c4071ea1cfd5269a0561df7"
+          }
+        ],
+        "fingerprint": "e4ef60b76a06692c1e52740f9b197dcbe7a7f275931823ebe873490957a833a2",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/deepseek_r1_distill_qwen_7b_baseline_eval_v1/deepseek_r1_distill_qwen_7b/livecodebench_v6"
+      }
+    }
+  ],
+  "tokenizer_identity": {
+    "definition": "sha256(tokenizer.json)",
+    "tokenizer_json_sha256": "88145e3c3249adc2546ede277e9819d6e405e19072456e4b521cbc724bd60773"
+  }
+}

@@ -1,0 +1,86 @@
+schema_version: code_rl_stage1_grpo_v1
+seed: 20260719
+candidate_source: open_r1_verified_python
+
+model_path: /path/to/opd-code/results/sft/qwen3-1p7b-v2-pilot/global_step_554/huggingface
+tokenizer_path: /path/to/models/Qwen3-1.7B-Base-chat
+stage1_train: /path/to/opd-code/data/sft_v2_pilot/train.parquet
+stage1_val: /path/to/opd-code/data/sft_v2_pilot/val.parquet
+output_dir: /path/to/opd-code/data/rl/sft_s1_554_grpo
+
+hf_cache_dir: /path/to/.cache/huggingface
+hf_endpoint: https://huggingface.co
+download_retries: 6
+download_backoff_sec: 30
+
+open_r1:
+  hf_id: open-r1/verifiable-coding-problems-python
+  revision: b761a24a95fa03289a231d2d31c183636ffb9833
+  split: train
+  candidate_target: 20000
+  license: apache-2.0
+  local_snapshot_glob: /path/to/.cache/huggingface/hub/datasets--open-r1--verifiable-coding-problems-python/snapshots/*/data/*.parquet
+
+# Provenance for the inactive seed-first attempt; the active builder does not scan it.
+source:
+  hf_id: microsoft/rStar-Coder
+  revision: 3a7a0a0636ec96e3c1ec42ebe79ade467caa040d
+  split: train
+  primary_testcase_config: seed_testcase
+  primary_solution_config: seed_sft
+  verified_solution_cache: /path/to/opd-code/data/sft_v2_stage2_rstar_cot/.candidate_cache/rstar_cot_train_filtered.jsonl
+  fallback_testcase_config: synthetic_rl_testcase
+  candidate_target: 20000
+  seed_scan_limit: 600000
+  synthetic_scan_limit: 100000
+  min_screened_before_fallback: 5000
+
+prompt:
+  instruction: >-
+    Solve the programming problem in Python. Preserve any required starter-code
+    interface. Return only the complete final program inside one ```python code
+    block.
+  max_prompt_tokens: 4096
+
+tests:
+  reward_count: 10
+  min_total_count: 5
+  primary_type: standard_io
+  primary_type_id: 0
+  selection: deterministic_stratified_up_to_10
+  preserve_audit_remainder: true
+
+dedup:
+  enable: true
+  shingle_size: 5
+  simhash_bands: 4
+  simhash_hamming_threshold: 3
+
+decontam:
+  enable: true
+  ngram_size: 13
+  containment_threshold: 0.50
+  targets:
+    - name: humaneval_plus
+      path: /path/to/pylibs/evalplus_cache/HumanEvalPlus-v0.1.10.jsonl
+    - name: mbpp_plus
+      path: /path/to/pylibs/evalplus_cache/MbppPlus-v0.2.0.jsonl
+    - name: livecodebench_v6_only
+      path: /path/to/.cache/huggingface/hub/datasets--livecodebench--code_generation_lite/snapshots/0fe84c3912ea0c4d4a78037083943e8f0c4dd505/test6.jsonl
+
+screening:
+  n: 16
+  temperature: 0.6
+  top_p: 0.95
+  max_new_tokens: 4096
+  max_model_len: 8192
+  num_shards: 32
+  max_num_seqs: 128
+  request_concurrency: 64
+  request_timeout_sec: 150
+  max_retries: 3
+  smoke_problems: 32
+
+split:
+  dev_fraction: 0.05
+  seed: 20260719

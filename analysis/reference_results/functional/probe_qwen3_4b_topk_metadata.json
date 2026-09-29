@@ -1,0 +1,33 @@
+{
+  "base_checkpoint": {
+    "fingerprint": "97fb23f1860189c17bb5f709a28b6204abef6052c589b9641abcc1b74d11d856",
+    "path": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b"
+  },
+  "cohort": {
+    "manifest_path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/manifest.json",
+    "manifest_sha256": "92d69cddae15b8bbeb61b6ef6648791e590d4b91dd5c0279d6319db7b39fa88c",
+    "path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/cohort.jsonl",
+    "sha256": "dea3595a71944288594453b0b57826ad8b3be4c7feda102b3c7a7ba325ab908e"
+  },
+  "data": {
+    "path": "/path/to/opd-code/results/analysis/qwen3_4b_functional_geometry_v2/function_space/fisher_k128/base_topk.npz",
+    "sha256": "b19cee442036991691c747d75b1c465416f66e430bcdc2ace8f8840421ed9504"
+  },
+  "definition": "At each exact probe response position, freeze the base model's top-K token IDs and their full-vocabulary-normalized log probabilities.",
+  "schema_version": "opd_function_space_fisher_reference_v1",
+  "scoring": {
+    "attn_implementation": "flash_attention_2",
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "positions": 73823,
+    "records": 128,
+    "retained_base_probability_mass_mean": 0.9999427475335775,
+    "retained_base_probability_mass_min": 0.9470792082859364,
+    "top_k": 128
+  },
+  "tokenizer_identity": {
+    "definition": "sha256(tokenizer.json)",
+    "tokenizer_json_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "tokenizer_reference": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b"
+}

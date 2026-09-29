@@ -1,0 +1,2 @@
+rank,item_sha256,prompt_sha256,data_source,source_index,source_split,first_position,count
+0,6472c965c187cd10085938f7dfa375aea7282ac5c92061456182b72c0c8c0859,52803140744c137fe2cba8f39754d4a367131614cc8759b140010568d3bf1fad,DAPO-Math-17k,10424,train,0,25600

@@ -1,0 +1,22 @@
+{
+  "schema_version": "opd_hf_warmstart_publication_v1",
+  "checkpoint": "/path/to/models/Qwen3-4B-Inst-Mix",
+  "tokenizer_source": "/path/to/models/Qwen3-4B-Inst-Mix",
+  "weight_files": [
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4996066856,
+      "sha256": "8a4d118b1557936c0d471836a13e7db6c40ada59d8e2eee14075744e64c29ece"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 3048915120,
+      "sha256": "2a7e2589ea729ee118729b7473dca739605163961d275f5dcd712ce3a9cf385a"
+    }
+  ],
+  "metadata_repairs": {
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "pad_token_id": 151643
+  }
+}

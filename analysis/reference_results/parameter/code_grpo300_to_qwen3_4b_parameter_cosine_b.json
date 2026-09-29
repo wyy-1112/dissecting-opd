@@ -1,0 +1,40 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_qwen3_4b_code_grpo300/student_qwen3_4b_nonthinking",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_clean187": 0.05164284087376367,
+    "teacher_vs_entropyc": 0.06368849877788468,
+    "teacher_vs_full": 0.06922234089334921,
+    "teacher_vs_m2ab": 0.04836723552619345,
+    "teacher_vs_m2oldnew": 0.048101943870448166,
+    "teacher_vs_m48": 0.07104135786637435
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "clean187": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_m1_clean_replacement_v1/train_b256_s100/seed_42/index_187/merged_hf/step_100",
+    "entropyc": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_m1_entropy_c_v1/train_b256_s100/seed_42/selected_c/merged_hf/step_100",
+    "full": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_diversity_b256_s100_v1/train_b256_s100/seed_42/support_22618/merged_hf/step_100",
+    "m2ab": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_m2_aprime_b_v1/train_b256_s100/seed_42/indices_15240_187/merged_hf/step_100",
+    "m2oldnew": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_m2_old_new_pair_v1/train_b256_s100/seed_42/indices_5038_187/merged_hf/step_100",
+    "m48": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_diversity_b256_s100_v1/train_b256_s100/seed_42/support_48/merged_hf/step_100",
+    "teacher": "/path/to/opd-code/data/models/opd_qwen3_4b_code_grpo300/teacher_qwen3_4b_code_grpo_step300"
+  },
+  "norms": {
+    "clean187": 2.931991520247879,
+    "entropyc": 3.0412850828247024,
+    "full": 4.283932647206451,
+    "m2ab": 3.1967854182632665,
+    "m2oldnew": 3.1597611082959376,
+    "m48": 3.7706496604990343,
+    "teacher": 0.5893031504416629
+  },
+  "parameter_count": 4022468096,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

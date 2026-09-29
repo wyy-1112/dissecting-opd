@@ -1,0 +1,34 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_code": 0.16708981588134936,
+    "teacher_vs_math": 0.1344143708223674,
+    "teacher_vs_mix": 0.1807783992465478,
+    "teacher_vs_science": 0.1410414683027961
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "code": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_code48/merged_hf/step_75",
+    "math": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_math48/merged_hf/step_75",
+    "mix": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_mix48/merged_hf/step_75",
+    "science": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_science48/merged_hf/step_75",
+    "teacher": "/path/to/opd-code/data/models/opd_nemotron_v1_1p5b_teacher_shared_tokenizer"
+  },
+  "norms": {
+    "code": 3.757714582015098,
+    "math": 3.6892362722878853,
+    "mix": 3.936534587840134,
+    "science": 3.7468780366161605,
+    "teacher": 7.176812090607069
+  },
+  "parameter_count": 1777088000,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

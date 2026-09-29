@@ -1,0 +1,547 @@
+{
+  "content_sha256": "be0675eef3355c3dbf776ad87a3a9131e13f4a7e6e6ae287cb6103e583ff6537",
+  "domains": {
+    "all": {
+      "cosine": {
+        "dapo_m8": {
+          "dapo_m8": 0.9999999999999999,
+          "deepmath_m8": 0.9924093293808168,
+          "teacher": 0.9631227548275304
+        },
+        "deepmath_m8": {
+          "dapo_m8": 0.9924093293808168,
+          "deepmath_m8": 0.9999999999999998,
+          "teacher": 0.960400404816096
+        },
+        "teacher": {
+          "dapo_m8": 0.9631227548275304,
+          "deepmath_m8": 0.960400404816096,
+          "teacher": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "dapo_m8": 81.3814834828462,
+        "deepmath_m8": 72.65028404523984,
+        "teacher": 117.60006327906459
+      },
+      "positions": 130882,
+      "scalar_fit_against_reference": {
+        "dapo_m8": {
+          "cosine": 0.9631227548275304,
+          "norm_over_reference": 0.6920190450044928,
+          "residual_over_reference": 0.18619628456990975,
+          "residual_over_self": 0.26906237034083486,
+          "scale": 0.6664992890178439
+        },
+        "deepmath_m8": {
+          "cosine": 0.960400404816096,
+          "norm_over_reference": 0.6177741917777794,
+          "residual_over_reference": 0.17212641603346862,
+          "residual_over_self": 0.2786235137763484,
+          "scale": 0.5933105838683158
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.980268990719708,
+        "labels": [
+          "teacher",
+          "deepmath_m8",
+          "dapo_m8"
+        ],
+        "participation_ratio": 1.0403072946094674,
+        "second_over_first_singular": 0.135524214880924,
+        "singular_values": [
+          158.81778918316192,
+          21.523656188172126,
+          6.665326115719853
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m8": {
+            "dapo_m8": 1.0,
+            "deepmath_m8": 0.8994057795253418
+          },
+          "deepmath_m8": {
+            "dapo_m8": 0.8994057795253418,
+            "deepmath_m8": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "dapo_m8": 21.8966948477481,
+          "deepmath_m8": 20.242077417534485
+        },
+        "residual_over_self": {
+          "dapo_m8": 0.26906237034083486,
+          "deepmath_m8": 0.2786235137763481
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.9500293052736704,
+          "labels": [
+            "deepmath_m8",
+            "dapo_m8"
+          ],
+          "participation_ratio": 1.10490797211857,
+          "second_over_first_singular": 0.2293449557579916,
+          "singular_values": [
+            29.064972986638775,
+            6.665904943727891
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "gpqa": {
+      "cosine": {
+        "dapo_m8": {
+          "dapo_m8": 1.0,
+          "deepmath_m8": 0.9930096344740751,
+          "teacher": 0.9726051130794534
+        },
+        "deepmath_m8": {
+          "dapo_m8": 0.9930096344740751,
+          "deepmath_m8": 1.0000000000000002,
+          "teacher": 0.9727185927795612
+        },
+        "teacher": {
+          "dapo_m8": 0.9726051130794534,
+          "deepmath_m8": 0.9727185927795612,
+          "teacher": 1.0
+        }
+      },
+      "norms": {
+        "dapo_m8": 43.8727391343375,
+        "deepmath_m8": 38.27866954034397,
+        "teacher": 59.1560954191129
+      },
+      "positions": 32768,
+      "scalar_fit_against_reference": {
+        "dapo_m8": {
+          "cosine": 0.9726051130794534,
+          "norm_over_reference": 0.7416435926594732,
+          "residual_over_reference": 0.17240508951619815,
+          "residual_over_self": 0.23246353264910924,
+          "scale": 0.7213263503032191
+        },
+        "deepmath_m8": {
+          "cosine": 0.9727185927795612,
+          "norm_over_reference": 0.6470790417985636,
+          "residual_over_reference": 0.15011472213817126,
+          "residual_over_self": 0.23198823086732293,
+          "scale": 0.6294258149554456
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9855009826992481,
+        "labels": [
+          "teacher",
+          "deepmath_m8",
+          "dapo_m8"
+        ],
+        "participation_ratio": 1.0294640628928309,
+        "second_over_first_singular": 0.11402795870663625,
+        "singular_values": [
+          82.39918794562163,
+          9.395811200523703,
+          3.4073397174206064
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m8": {
+            "dapo_m8": 0.9999999999999999,
+            "deepmath_m8": 0.8703801001662511
+          },
+          "deepmath_m8": {
+            "dapo_m8": 0.8703801001662511,
+            "deepmath_m8": 1.0000000000000002
+          }
+        },
+        "residual_norm": {
+          "dapo_m8": 10.198811926160907,
+          "deepmath_m8": 8.880200826619278
+        },
+        "residual_over_self": {
+          "dapo_m8": 0.232463532649109,
+          "deepmath_m8": 0.23198823086732293
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.9365059386505532,
+          "labels": [
+            "deepmath_m8",
+            "dapo_m8"
+          ],
+          "participation_ratio": 1.1349773273941308,
+          "second_over_first_singular": 0.26038219622424863,
+          "singular_values": [
+            13.086723635192593,
+            3.40754984151123
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "humaneval_plus": {
+      "cosine": {
+        "dapo_m8": {
+          "dapo_m8": 0.9999999999999999,
+          "deepmath_m8": 0.9942561930942401,
+          "teacher": 0.9585356170546342
+        },
+        "deepmath_m8": {
+          "dapo_m8": 0.9942561930942401,
+          "deepmath_m8": 1.0,
+          "teacher": 0.9567273917386055
+        },
+        "teacher": {
+          "dapo_m8": 0.9585356170546342,
+          "deepmath_m8": 0.9567273917386055,
+          "teacher": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "dapo_m8": 37.22399997669235,
+        "deepmath_m8": 34.80889794868219,
+        "teacher": 57.7940958018012
+      },
+      "positions": 32633,
+      "scalar_fit_against_reference": {
+        "dapo_m8": {
+          "cosine": 0.9585356170546344,
+          "norm_over_reference": 0.6440796323615505,
+          "residual_over_reference": 0.1835451469857433,
+          "residual_over_self": 0.284972754553293,
+          "scale": 0.6173732678380008
+        },
+        "deepmath_m8": {
+          "cosine": 0.9567273917386055,
+          "norm_over_reference": 0.6022915916542004,
+          "residual_over_reference": 0.17525826140270298,
+          "residual_over_self": 0.2909857348686444,
+          "scale": 0.5762288635494164
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9786412414922435,
+        "labels": [
+          "teacher",
+          "deepmath_m8",
+          "dapo_m8"
+        ],
+        "participation_ratio": 1.0436837019515313,
+        "second_over_first_singular": 0.143352817358357,
+        "singular_values": [
+          76.22746649166338,
+          10.927422081669699,
+          2.7217382544452087
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m8": {
+            "dapo_m8": 1.0,
+            "deepmath_m8": 0.9309709771914204
+          },
+          "deepmath_m8": {
+            "dapo_m8": 0.9309709771914204,
+            "deepmath_m8": 1.0
+          }
+        },
+        "residual_norm": {
+          "dapo_m8": 10.607825808849732,
+          "deepmath_m8": 10.128892749564923
+        },
+        "residual_over_self": {
+          "dapo_m8": 0.28497275455329296,
+          "deepmath_m8": 0.29098573486864404
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.9655617741155532,
+          "labels": [
+            "deepmath_m8",
+            "dapo_m8"
+          ],
+          "participation_ratio": 1.0712424074392772,
+          "second_over_first_singular": 0.18885581132063556,
+          "singular_values": [
+            14.412219486632058,
+            2.721831404078971
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "livecodebench_v6": {
+      "cosine": {
+        "dapo_m8": {
+          "dapo_m8": 1.0000000000000002,
+          "deepmath_m8": 0.9934774227412111,
+          "teacher": 0.9638618779813437
+        },
+        "deepmath_m8": {
+          "dapo_m8": 0.9934774227412111,
+          "deepmath_m8": 1.0000000000000002,
+          "teacher": 0.9557618558447528
+        },
+        "teacher": {
+          "dapo_m8": 0.9638618779813437,
+          "deepmath_m8": 0.9557618558447528,
+          "teacher": 0.9999999999999999
+        }
+      },
+      "norms": {
+        "dapo_m8": 39.4722591412497,
+        "deepmath_m8": 35.56426310137537,
+        "teacher": 59.34049806668296
+      },
+      "positions": 32713,
+      "scalar_fit_against_reference": {
+        "dapo_m8": {
+          "cosine": 0.9638618779813437,
+          "norm_over_reference": 0.6651824711159884,
+          "residual_over_reference": 0.17720625848980417,
+          "residual_over_self": 0.26640247779305143,
+          "scale": 0.6411440258101275
+        },
+        "deepmath_m8": {
+          "cosine": 0.9557618558447528,
+          "norm_over_reference": 0.5993253218301368,
+          "residual_over_reference": 0.1762865030338016,
+          "residual_over_self": 0.29414158990559963,
+          "scale": 0.5728122818471252
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9797298376647671,
+        "labels": [
+          "teacher",
+          "deepmath_m8",
+          "dapo_m8"
+        ],
+        "participation_ratio": 1.0414167021942329,
+        "second_over_first_singular": 0.1389738219421636,
+        "singular_values": [
+          78.83890785153181,
+          10.956544341873427,
+          2.924296038717818
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m8": {
+            "dapo_m8": 1.0,
+            "deepmath_m8": 0.9220898527265038
+          },
+          "deepmath_m8": {
+            "dapo_m8": 0.9220898527265038,
+            "deepmath_m8": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "dapo_m8": 10.515507639318356,
+          "deepmath_m8": 10.460928892459604
+        },
+        "residual_over_self": {
+          "dapo_m8": 0.2664024777930517,
+          "deepmath_m8": 0.2941415899055997
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.9610460258038394,
+          "labels": [
+            "deepmath_m8",
+            "dapo_m8"
+          ],
+          "participation_ratio": 1.0809328170416461,
+          "second_over_first_singular": 0.20132782073505662,
+          "singular_values": [
+            14.540866197294958,
+            2.927480903101444
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "math": {
+      "cosine": {
+        "dapo_m8": {
+          "dapo_m8": 1.0,
+          "deepmath_m8": 0.9906917705775833,
+          "teacher": 0.9621159582179687
+        },
+        "deepmath_m8": {
+          "dapo_m8": 0.9906917705775833,
+          "deepmath_m8": 1.0,
+          "teacher": 0.9572409078732202
+        },
+        "teacher": {
+          "dapo_m8": 0.9621159582179687,
+          "deepmath_m8": 0.9572409078732202,
+          "teacher": 1.0
+        }
+      },
+      "norms": {
+        "dapo_m8": 41.88607404305689,
+        "deepmath_m8": 36.55586196124397,
+        "teacher": 58.89719040544289
+      },
+      "positions": 32768,
+      "scalar_fit_against_reference": {
+        "dapo_m8": {
+          "cosine": 0.9621159582179687,
+          "norm_over_reference": 0.711172702037516,
+          "residual_over_reference": 0.19389453415477723,
+          "residual_over_self": 0.2726405746442006,
+          "scale": 0.6842306056792867
+        },
+        "deepmath_m8": {
+          "cosine": 0.9572409078732202,
+          "norm_over_reference": 0.6206724244330969,
+          "residual_over_reference": 0.17955554880469252,
+          "residual_over_self": 0.2892919706698635,
+          "scale": 0.5941330350562103
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9790625221156921,
+        "labels": [
+          "teacher",
+          "deepmath_m8",
+          "dapo_m8"
+        ],
+        "participation_ratio": 1.042838003884871,
+        "second_over_first_singular": 0.13860206183385257,
+        "singular_values": [
+          80.13932046532224,
+          11.10747505045752,
+          3.737190587166675
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m8": {
+            "dapo_m8": 1.0,
+            "deepmath_m8": 0.8838925447177415
+          },
+          "deepmath_m8": {
+            "dapo_m8": 0.8838925447177415,
+            "deepmath_m8": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "dapo_m8": 11.419843296688574,
+          "deepmath_m8": 10.575317346303759
+        },
+        "residual_over_self": {
+          "dapo_m8": 0.27264057464420083,
+          "deepmath_m8": 0.28929197066986323
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.9423098777306439,
+          "labels": [
+            "deepmath_m8",
+            "dapo_m8"
+          ],
+          "participation_ratio": 1.121986833828854,
+          "second_over_first_singular": 0.24743085616782245,
+          "singular_values": [
+            15.108762909886687,
+            3.7383741424299037
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    }
+  },
+  "inputs": {
+    "anchor_base_score": {
+      "checkpoint": {
+        "fingerprint": "3a813196e79c07b2a29b065ef352a296334001294ded3faec3d4acfbab2a7ed0",
+        "path": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b"
+      },
+      "label": "base_fp32",
+      "log_probability_shift_rms": 0.0761961921603536,
+      "path": "results/analysis/deepseek_1p5b_justrl_deepmath_m8_lambda_scaling_v1/scores/base_fp32.npz",
+      "sha256": "59380980e4661f4a748dd5df3e1bc51cc31d6183d087a3db65a404dca8f6e73f"
+    },
+    "reference": {
+      "cohort": {
+        "manifest_path": "/path/to/opd-code/data/opd/function_space_geometry_deepseek_v1/cohort/manifest.json",
+        "manifest_sha256": "464f82e1a6b2b1fe3f5cf00d902017e77d36c4d9d0d18a4dd53d3d66807069e3",
+        "path": "/path/to/opd-code/data/opd/function_space_geometry_deepseek_v1/cohort/cohort.jsonl",
+        "sha256": "7f09c6fbf45689a3dd9c3f850074f1d648b453f44f3be09e3cb44a6302e9b09f"
+      },
+      "path": "results/analysis/deepseek_1p5b_functional_geometry_v1/function_space/fisher_k128/base_topk.npz",
+      "sha256": "71ca5cca2a859528d150a3623cff9c7690b7dacfed267b73130220157c9a9921",
+      "top_k": 128
+    },
+    "reference_label": "teacher",
+    "scores": {
+      "dapo_m8": {
+        "checkpoint": {
+          "fingerprint": "2b59953a0d5db1b19824467ba8a4636778eb283b11d66f0a7baf81bf65d031ab",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_deepscaler_teacher_dapo_m8_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_65"
+        },
+        "path": "results/analysis/deepscaler_1p5b_functional_geometry_v1/scores/dapo_m8.npz",
+        "sha256": "86567fdc4d9a0eb7d72573eb07e8e0197a29bb65b30f038c9fc3d53a1dbf6caf"
+      },
+      "deepmath_m8": {
+        "checkpoint": {
+          "fingerprint": "26c0eb80f9897c2850f1b6000988e94324381ddc8bcc21856ae570c5a81614e5",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_deepscaler_teacher_deepmath_m8_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_65"
+        },
+        "path": "results/analysis/deepscaler_1p5b_functional_geometry_v1/scores/deepmath_m8.npz",
+        "sha256": "2cc4266e76458151c0b69491640b983eb1e83a2f3110c22fd046cecee40c0ff8"
+      },
+      "teacher": {
+        "checkpoint": {
+          "fingerprint": "f23efe733b816604c94e40afa234dbc0ff72f11b0898004faef9355aeabe85a1",
+          "path": "/path/to/opd-code/data/models/opd_deepscaler_1p5b_teacher_r1_distill_tokenizer"
+        },
+        "path": "results/analysis/deepscaler_1p5b_functional_geometry_v1/scores/teacher.npz",
+        "sha256": "12b00bc7fc6da58e1f6561dc50788fb5b15a67b8a35eabcb35b8695dd85fab4a"
+      }
+    },
+    "subspace_labels": [
+      "teacher",
+      "deepmath_m8",
+      "dapo_m8"
+    ]
+  },
+  "representation": "centered top-K Fisher vector, identical to fisher_centered_vector; all quantities are exact functions of the Gram matrix of the full flattened vectors, not of any per-probe scalar reduction",
+  "schema_version": "opd_endpoint_collinearity_v1"
+}

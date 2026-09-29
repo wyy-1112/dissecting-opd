@@ -1,0 +1,27 @@
+{
+  "schema_version": "opd_hf_warmstart_publication_v1",
+  "checkpoint": "/path/to/models/Qwen3-4B-Instruct-2507",
+  "tokenizer_source": "/path/to/models/Qwen3-4B-Inst-Mix",
+  "weight_files": [
+    {
+      "name": "model-00001-of-00003.safetensors",
+      "bytes": 3957900840,
+      "sha256": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6"
+    },
+    {
+      "name": "model-00002-of-00003.safetensors",
+      "bytes": 3987450520,
+      "sha256": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1"
+    },
+    {
+      "name": "model-00003-of-00003.safetensors",
+      "bytes": 99630640,
+      "sha256": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d"
+    }
+  ],
+  "metadata_repairs": {
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "pad_token_id": 151643
+  }
+}

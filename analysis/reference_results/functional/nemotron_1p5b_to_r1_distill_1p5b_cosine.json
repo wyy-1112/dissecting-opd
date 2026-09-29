@@ -1,0 +1,876 @@
+{
+  "content_sha256": "8e8da8d584e78775a1a81ea76cc7b9378bc1025c0fbdf66224254c12e518068e",
+  "domains": {
+    "all": {
+      "cosine": {
+        "code": {
+          "code": 1.0,
+          "deepmath": 0.9156009318763899,
+          "mix": 0.9800139446143061,
+          "science": 0.9066081941439171,
+          "teacher": 0.9624300764515681
+        },
+        "deepmath": {
+          "code": 0.9156009318763899,
+          "deepmath": 1.0,
+          "mix": 0.9555752959868405,
+          "science": 0.9801073539003384,
+          "teacher": 0.9225344185422726
+        },
+        "mix": {
+          "code": 0.9800139446143061,
+          "deepmath": 0.9555752959868405,
+          "mix": 1.0,
+          "science": 0.9529857339793114,
+          "teacher": 0.9774797312801979
+        },
+        "science": {
+          "code": 0.9066081941439171,
+          "deepmath": 0.9801073539003384,
+          "mix": 0.9529857339793114,
+          "science": 0.9999999999999999,
+          "teacher": 0.9247816300266948
+        },
+        "teacher": {
+          "code": 0.9624300764515681,
+          "deepmath": 0.9225344185422726,
+          "mix": 0.9774797312801979,
+          "science": 0.9247816300266948,
+          "teacher": 0.9999999999999999
+        }
+      },
+      "norms": {
+        "code": 200.49364615833287,
+        "deepmath": 164.5056446945963,
+        "mix": 213.7274076876865,
+        "science": 173.0818407863249,
+        "teacher": 226.14286806258607
+      },
+      "positions": 130663,
+      "scalar_fit_against_reference": {
+        "code": {
+          "cosine": 0.9624300764515683,
+          "norm_over_reference": 0.8865795674920216,
+          "residual_over_reference": 0.24073263494391203,
+          "residual_over_self": 0.27152964468254387,
+          "scale": 0.8532708409217447
+        },
+        "deepmath": {
+          "cosine": 0.9225344185422727,
+          "norm_over_reference": 0.7274412237889749,
+          "residual_over_reference": 0.28073034734557717,
+          "residual_over_self": 0.38591481780941095,
+          "scale": 0.6710895664118413
+        },
+        "mix": {
+          "cosine": 0.9774797312801979,
+          "norm_over_reference": 0.9450990407910476,
+          "residual_over_reference": 0.19944361023229418,
+          "residual_over_self": 0.21102932245636388,
+          "scale": 0.923815156425606
+        },
+        "science": {
+          "cosine": 0.9247816300266949,
+          "norm_over_reference": 0.7653650202155555,
+          "residual_over_reference": 0.29122006942160883,
+          "residual_over_self": 0.3804982743261383,
+          "scale": 0.7077955109603558
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9614121562204208,
+        "labels": [
+          "teacher",
+          "deepmath",
+          "science",
+          "code",
+          "mix"
+        ],
+        "participation_ratio": 1.0810543224607991,
+        "second_over_first_singular": 0.16070093251361514,
+        "singular_values": [
+          431.91394957373814,
+          69.40897446213826,
+          41.87361363733059,
+          23.11684163708896,
+          19.546892594655972
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "code": {
+            "code": 1.0,
+            "deepmath": 0.26459368048640153,
+            "mix": 0.6851232271089054,
+            "science": 0.1603860896939352
+          },
+          "deepmath": {
+            "code": 0.26459368048640153,
+            "deepmath": 1.0,
+            "mix": 0.6608182087763907,
+            "science": 0.8646454496250676
+          },
+          "mix": {
+            "code": 0.6851232271089054,
+            "deepmath": 0.6608182087763907,
+            "mix": 0.9999999999999999,
+            "science": 0.6106189080428995
+          },
+          "science": {
+            "code": 0.1603860896939352,
+            "deepmath": 0.8646454496250676,
+            "mix": 0.6106189080428995,
+            "science": 0.9999999999999998
+          }
+        },
+        "residual_norm": {
+          "code": 54.43996850247979,
+          "deepmath": 63.48516590093482,
+          "mix": 45.102750034687546,
+          "science": 65.85734173638802
+        },
+        "residual_over_self": {
+          "code": 0.2715296446825438,
+          "deepmath": 0.3859148178094109,
+          "mix": 0.2110293224563639,
+          "science": 0.38049827432613814
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.6903508803373981,
+          "labels": [
+            "deepmath",
+            "science",
+            "code",
+            "mix"
+          ],
+          "participation_ratio": 1.8637617256453756,
+          "second_over_first_singular": 0.5892452266577617,
+          "singular_values": [
+            96.05676054634408,
+            56.60098764014086,
+            23.301118353878167,
+            19.799212516072632
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "gpqa": {
+      "cosine": {
+        "code": {
+          "code": 1.0000000000000002,
+          "deepmath": 0.9710919185702559,
+          "mix": 0.978848172823594,
+          "science": 0.9547541002451647,
+          "teacher": 0.9498800251200058
+        },
+        "deepmath": {
+          "code": 0.9710919185702559,
+          "deepmath": 1.0,
+          "mix": 0.9869712736772522,
+          "science": 0.9792908152173427,
+          "teacher": 0.9567014701688004
+        },
+        "mix": {
+          "code": 0.978848172823594,
+          "deepmath": 0.9869712736772522,
+          "mix": 1.0,
+          "science": 0.987636097552334,
+          "teacher": 0.9771834386496632
+        },
+        "science": {
+          "code": 0.9547541002451647,
+          "deepmath": 0.9792908152173427,
+          "mix": 0.987636097552334,
+          "science": 1.0,
+          "teacher": 0.9766890448764627
+        },
+        "teacher": {
+          "code": 0.9498800251200058,
+          "deepmath": 0.9567014701688004,
+          "mix": 0.9771834386496632,
+          "science": 0.9766890448764627,
+          "teacher": 1.0
+        }
+      },
+      "norms": {
+        "code": 91.61417282308427,
+        "deepmath": 86.5739869450488,
+        "mix": 107.2910442839593,
+        "science": 103.96270742032969,
+        "teacher": 113.59397751908905
+      },
+      "positions": 32768,
+      "scalar_fit_against_reference": {
+        "code": {
+          "cosine": 0.9498800251200056,
+          "norm_over_reference": 0.8065055456631832,
+          "residual_over_reference": 0.25212547272294344,
+          "residual_over_self": 0.3126146795625846,
+          "scale": 0.7660835079739683
+        },
+        "deepmath": {
+          "cosine": 0.9567014701688004,
+          "norm_over_reference": 0.762135359953395,
+          "residual_over_reference": 0.22183546199726925,
+          "residual_over_self": 0.291070948355991,
+          "scale": 0.7291360193350409
+        },
+        "mix": {
+          "cosine": 0.9771834386496632,
+          "norm_over_reference": 0.9445134911833634,
+          "residual_over_reference": 0.20061192452695667,
+          "residual_over_self": 0.21239709797645528,
+          "scale": 0.9229629411655573
+        },
+        "science": {
+          "cosine": 0.9766890448764625,
+          "norm_over_reference": 0.9152131978375274,
+          "residual_over_reference": 0.19645879958468643,
+          "residual_over_self": 0.214659054359007,
+          "scale": 0.8938787040542677
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9781667415162125,
+        "labels": [
+          "teacher",
+          "deepmath",
+          "science",
+          "code",
+          "mix"
+        ],
+        "participation_ratio": 1.0449341003174664,
+        "second_over_first_singular": 0.10949425876318944,
+        "singular_values": [
+          223.59670739941905,
+          24.482555738589145,
+          18.423560413735157,
+          10.47249008343443,
+          8.21173560909177
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "code": {
+            "code": 1.0000000000000002,
+            "deepmath": 0.6851105792957316,
+            "mix": 0.7626856202225412,
+            "science": 0.4025997419012095
+          },
+          "deepmath": {
+            "code": 0.6851105792957316,
+            "deepmath": 1.0,
+            "mix": 0.8427083372621932,
+            "science": 0.718473770427739
+          },
+          "mix": {
+            "code": 0.7626856202225412,
+            "deepmath": 0.8427083372621932,
+            "mix": 1.0,
+            "science": 0.7288787137873568
+          },
+          "science": {
+            "code": 0.4025997419012095,
+            "deepmath": 0.718473770427739,
+            "mix": 0.7288787137873568,
+            "science": 1.0000000000000002
+          }
+        },
+        "residual_norm": {
+          "code": 28.639935280479737,
+          "deepmath": 25.199172483054557,
+          "mix": 22.788306444776303,
+          "science": 22.31653646345013
+        },
+        "residual_over_self": {
+          "code": 0.3126146795625846,
+          "deepmath": 0.29107094835599123,
+          "mix": 0.21239709797645526,
+          "science": 0.21465905435900737
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7686217389407758,
+          "labels": [
+            "deepmath",
+            "science",
+            "code",
+            "mix"
+          ],
+          "participation_ratio": 1.6172262198103386,
+          "second_over_first_singular": 0.4516930288470541,
+          "singular_values": [
+            43.594470882395385,
+            19.69131859385388,
+            10.787544759932548,
+            8.245111013086001
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "humaneval_plus": {
+      "cosine": {
+        "code": {
+          "code": 1.0,
+          "deepmath": 0.9387479034795558,
+          "mix": 0.9943250779702288,
+          "science": 0.9395959091029091,
+          "teacher": 0.980142297647809
+        },
+        "deepmath": {
+          "code": 0.9387479034795558,
+          "deepmath": 1.0,
+          "mix": 0.9505728329281236,
+          "science": 0.9894286396523548,
+          "teacher": 0.9186142772268006
+        },
+        "mix": {
+          "code": 0.9943250779702288,
+          "deepmath": 0.9505728329281236,
+          "mix": 1.0,
+          "science": 0.9524357162720717,
+          "teacher": 0.9796875337365554
+        },
+        "science": {
+          "code": 0.9395959091029091,
+          "deepmath": 0.9894286396523548,
+          "mix": 0.9524357162720717,
+          "science": 1.0,
+          "teacher": 0.9221317155676905
+        },
+        "teacher": {
+          "code": 0.980142297647809,
+          "deepmath": 0.9186142772268006,
+          "mix": 0.9796875337365554,
+          "science": 0.9221317155676905,
+          "teacher": 1.0
+        }
+      },
+      "norms": {
+        "code": 108.47704651735931,
+        "deepmath": 74.80101498407441,
+        "mix": 108.0824827966027,
+        "science": 78.05078694822878,
+        "teacher": 117.53283126539911
+      },
+      "positions": 32530,
+      "scalar_fit_against_reference": {
+        "code": {
+          "cosine": 0.980142297647809,
+          "norm_over_reference": 0.9229510201486505,
+          "residual_over_reference": 0.18301696662315098,
+          "residual_over_self": 0.19829542698124353,
+          "scale": 0.9046233335048877
+        },
+        "deepmath": {
+          "cosine": 0.9186142772268006,
+          "norm_over_reference": 0.6364265557014225,
+          "residual_over_reference": 0.25148740591277796,
+          "residual_over_self": 0.3951554247066373,
+          "scale": 0.5846305204736043
+        },
+        "mix": {
+          "cosine": 0.9796875337365554,
+          "norm_over_reference": 0.9195939690463449,
+          "residual_over_reference": 0.18440630550510664,
+          "residual_over_self": 0.2005301379872502,
+          "scale": 0.9009147475740239
+        },
+        "science": {
+          "cosine": 0.9221317155676907,
+          "norm_over_reference": 0.6640764636391977,
+          "residual_over_reference": 0.2569152972432146,
+          "residual_over_self": 0.38687607724462336,
+          "scale": 0.6123659686837385
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9705454842062032,
+        "labels": [
+          "teacher",
+          "deepmath",
+          "science",
+          "code",
+          "mix"
+        ],
+        "participation_ratio": 1.0610617879929145,
+        "second_over_first_singular": 0.14858415824193533,
+        "singular_values": [
+          217.96415434248416,
+          32.38602039989328,
+          16.591082253962202,
+          7.984455838688061,
+          7.343968871074723
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "code": {
+            "code": 1.0,
+            "deepmath": 0.4897449312888582,
+            "mix": 0.8573510764349361,
+            "science": 0.4663397990971046
+          },
+          "deepmath": {
+            "code": 0.4897449312888582,
+            "deepmath": 0.9999999999999999,
+            "mix": 0.6387873792355723,
+            "science": 0.9311148386752083
+          },
+          "mix": {
+            "code": 0.8573510764349361,
+            "deepmath": 0.6387873792355723,
+            "mix": 1.0,
+            "science": 0.6320517161367126
+          },
+          "science": {
+            "code": 0.4663397990971046,
+            "deepmath": 0.9311148386752083,
+            "mix": 0.6320517161367126,
+            "science": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "code": 21.510502256823983,
+          "deepmath": 29.558026844519468,
+          "mix": 21.673795189207336,
+          "science": 30.1959822803866
+        },
+        "residual_over_self": {
+          "code": 0.19829542698124356,
+          "deepmath": 0.39515542470663734,
+          "mix": 0.2005301379872502,
+          "science": 0.38687607724462336
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7858850289762751,
+          "labels": [
+            "deepmath",
+            "science",
+            "code",
+            "mix"
+          ],
+          "participation_ratio": 1.5438605925783657,
+          "second_over_first_singular": 0.46616511132401467,
+          "singular_values": [
+            46.21666395247476,
+            21.544596296429972,
+            7.990345314172996,
+            7.343985794610535
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "livecodebench_v6": {
+      "cosine": {
+        "code": {
+          "code": 1.0,
+          "deepmath": 0.9170045720744209,
+          "mix": 0.9940002900988978,
+          "science": 0.9096191919062744,
+          "teacher": 0.9818624676784868
+        },
+        "deepmath": {
+          "code": 0.9170045720744209,
+          "deepmath": 0.9999999999999999,
+          "mix": 0.9362119472699754,
+          "science": 0.9894261135645763,
+          "teacher": 0.8964659857170859
+        },
+        "mix": {
+          "code": 0.9940002900988978,
+          "deepmath": 0.9362119472699754,
+          "mix": 1.0000000000000002,
+          "science": 0.9300996433923409,
+          "teacher": 0.9774126231437907
+        },
+        "science": {
+          "code": 0.9096191919062744,
+          "deepmath": 0.9894261135645763,
+          "mix": 0.9300996433923409,
+          "science": 1.0,
+          "teacher": 0.8875490989607854
+        },
+        "teacher": {
+          "code": 0.9818624676784868,
+          "deepmath": 0.8964659857170859,
+          "mix": 0.9774126231437907,
+          "science": 0.8875490989607854,
+          "teacher": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "code": 123.1097952759821,
+        "deepmath": 81.6028264561867,
+        "mix": 120.10960160645881,
+        "science": 81.3328306157804,
+        "teacher": 126.28452295613825
+      },
+      "positions": 32597,
+      "scalar_fit_against_reference": {
+        "code": {
+          "cosine": 0.9818624676784868,
+          "norm_over_reference": 0.9748605165079586,
+          "residual_over_reference": 0.18482824395990868,
+          "residual_over_self": 0.189594553097689,
+          "scale": 0.9571789523808285
+        },
+        "deepmath": {
+          "cosine": 0.8964659857170859,
+          "norm_over_reference": 0.6461823234231909,
+          "residual_over_reference": 0.28633150036701616,
+          "residual_over_self": 0.44311255506055525,
+          "scale": 0.5792804735205276
+        },
+        "mix": {
+          "cosine": 0.9774126231437907,
+          "norm_over_reference": 0.9511031026991,
+          "residual_over_reference": 0.20100605888711265,
+          "residual_over_self": 0.21133992552088732,
+          "scale": 0.9296201784893255
+        },
+        "science": {
+          "cosine": 0.8875490989607853,
+          "norm_over_reference": 0.6440443271423634,
+          "residual_over_reference": 0.29671968395306264,
+          "residual_over_self": 0.46071313952816473,
+          "scale": 0.5716209622460098
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9630616923152454,
+        "labels": [
+          "teacher",
+          "deepmath",
+          "science",
+          "code",
+          "mix"
+        ],
+        "participation_ratio": 1.0771602110474128,
+        "second_over_first_singular": 0.17376132466739813,
+        "singular_values": [
+          237.97487881393798,
+          41.350830180273405,
+          18.101425776196418,
+          8.32050687835519,
+          8.083495399855178
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "code": {
+            "code": 1.0,
+            "deepmath": 0.4380134598910889,
+            "mix": 0.8564128559996584,
+            "science": 0.43696177081560217
+          },
+          "deepmath": {
+            "code": 0.4380134598910889,
+            "deepmath": 0.9999999999999998,
+            "mix": 0.6406455814247527,
+            "science": 0.9491581985529257
+          },
+          "mix": {
+            "code": 0.8564128559996584,
+            "deepmath": 0.6406455814247527,
+            "mix": 0.9999999999999998,
+            "science": 0.6429067198692116
+          },
+          "science": {
+            "code": 0.43696177081560217,
+            "deepmath": 0.9491581985529257,
+            "mix": 0.6429067198692116,
+            "science": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "code": 23.340946617297806,
+          "deepmath": 36.15923693116397,
+          "mix": 25.383954257852455,
+          "science": 37.471103739708624
+        },
+        "residual_over_self": {
+          "code": 0.18959455309768897,
+          "deepmath": 0.44311255506055525,
+          "mix": 0.21133992552088735,
+          "science": 0.4607131395281648
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8029338318890523,
+          "labels": [
+            "deepmath",
+            "science",
+            "code",
+            "mix"
+          ],
+          "participation_ratio": 1.4887235288163945,
+          "second_over_first_singular": 0.44991499676683677,
+          "singular_values": [
+            55.964446004533926,
+            25.17924354318769,
+            8.32512166297765,
+            8.086889449437036
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    },
+    "math": {
+      "cosine": {
+        "code": {
+          "code": 0.9999999999999998,
+          "deepmath": 0.948520237712022,
+          "mix": 0.9593224020420924,
+          "science": 0.9458946709244681,
+          "teacher": 0.9313258820981098
+        },
+        "deepmath": {
+          "code": 0.948520237712022,
+          "deepmath": 1.0,
+          "mix": 0.9858523690149549,
+          "science": 0.9833043092061116,
+          "teacher": 0.9650078434529511
+        },
+        "mix": {
+          "code": 0.9593224020420924,
+          "deepmath": 0.9858523690149549,
+          "mix": 0.9999999999999999,
+          "science": 0.9875620196434197,
+          "teacher": 0.9757250067429565
+        },
+        "science": {
+          "code": 0.9458946709244681,
+          "deepmath": 0.9833043092061116,
+          "mix": 0.9875620196434197,
+          "science": 0.9999999999999999,
+          "teacher": 0.9591910947769321
+        },
+        "teacher": {
+          "code": 0.9313258820981098,
+          "deepmath": 0.9650078434529511,
+          "mix": 0.9757250067429565,
+          "science": 0.9591910947769321,
+          "teacher": 1.0
+        }
+      },
+      "norms": {
+        "code": 69.86597293233085,
+        "deepmath": 85.51513779756854,
+        "mix": 89.77692981950311,
+        "science": 80.26284567970579,
+        "teacher": 92.06116381756804
+      },
+      "positions": 32768,
+      "scalar_fit_against_reference": {
+        "code": {
+          "cosine": 0.93132588209811,
+          "norm_over_reference": 0.7589082087945352,
+          "residual_over_reference": 0.2763844312822579,
+          "residual_over_self": 0.36418690439687346,
+          "scale": 0.7067908569870671
+        },
+        "deepmath": {
+          "cosine": 0.965007843452951,
+          "norm_over_reference": 0.9288948157013162,
+          "residual_over_reference": 0.2435757438220636,
+          "residual_over_self": 0.26222101760592104,
+          "scale": 0.8963907828945535
+        },
+        "mix": {
+          "cosine": 0.9757250067429565,
+          "norm_over_reference": 0.9751878652914766,
+          "residual_over_reference": 0.213565499533924,
+          "residual_over_self": 0.21899934067585103,
+          "scale": 0.9515151864371754
+        },
+        "science": {
+          "cosine": 0.9591910947769322,
+          "norm_over_reference": 0.871842613664517,
+          "residual_over_reference": 0.24652102434301493,
+          "residual_over_self": 0.2827586315227712,
+          "scale": 0.83626367107405
+        },
+        "teacher": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.9737327230688363,
+        "labels": [
+          "teacher",
+          "deepmath",
+          "science",
+          "code",
+          "mix"
+        ],
+        "participation_ratio": 1.0544096415894526,
+        "second_over_first_singular": 0.11175653327918818,
+        "singular_values": [
+          185.06084457816002,
+          20.681758435773812,
+          17.741083539016714,
+          10.914408014159362,
+          7.8899112015377755
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "code": {
+            "code": 1.0,
+            "deepmath": 0.5213066015314918,
+            "mix": 0.6344853104800317,
+            "science": 0.5105526790048455
+          },
+          "deepmath": {
+            "code": 0.5213066015314918,
+            "deepmath": 1.0000000000000002,
+            "mix": 0.7709035484346011,
+            "science": 0.7778970957013966
+          },
+          "mix": {
+            "code": 0.6344853104800317,
+            "deepmath": 0.7709035484346011,
+            "mix": 1.0,
+            "science": 0.8341728683799667
+          },
+          "science": {
+            "code": 0.5105526790048455,
+            "deepmath": 0.7778970957013966,
+            "mix": 0.8341728683799667,
+            "science": 0.9999999999999998
+          }
+        },
+        "residual_norm": {
+          "code": 25.444272404901323,
+          "deepmath": 22.423866453989003,
+          "mix": 19.66108843837333,
+          "science": 22.695012406516998
+        },
+        "residual_over_self": {
+          "code": 0.36418690439687346,
+          "deepmath": 0.26222101760592126,
+          "mix": 0.21899934067585103,
+          "science": 0.2827586315227715
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7429851505447274,
+          "labels": [
+            "deepmath",
+            "science",
+            "code",
+            "mix"
+          ],
+          "participation_ratio": 1.711071172968617,
+          "second_over_first_singular": 0.47473343644776295,
+          "singular_values": [
+            39.0448917313112,
+            18.535915627336212,
+            10.914426646608842,
+            8.04079126684109
+          ]
+        },
+        "teacher_label": "teacher"
+      }
+    }
+  },
+  "inputs": {
+    "anchor_base_score": null,
+    "reference": {
+      "cohort": {
+        "manifest_path": "/path/to/opd-code/data/opd/source_domain_functional_recovery_v1/nemotron/initial_probe/manifest.json",
+        "manifest_sha256": "5f7eb687fabe90bbbdb02700f389f982cefcbca28963e7609c4f2ab1ab2275e0",
+        "path": "/path/to/opd-code/data/opd/source_domain_functional_recovery_v1/nemotron/initial_probe/cohort.jsonl",
+        "sha256": "8e09823d7b99fb48e0d40bac48eb9fe9c20fb164afc0763ebbf193eba1b43fd3"
+      },
+      "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/reference/base_topk.npz",
+      "sha256": "6b30fd825d1ef1d1ea0a20a40c1f36efc85f5d2862ea36bf88d29777529d8d0a",
+      "top_k": 128
+    },
+    "reference_label": "teacher",
+    "scores": {
+      "code": {
+        "checkpoint": {
+          "fingerprint": "1d36c05d3338f2e2e09ca5d67dcced21e81a29c5e2b63714b954f37d1c6f338f",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_code48/merged_hf/step_75"
+        },
+        "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/scores/code.npz",
+        "sha256": "aa98dd3da6b510f3238290b571381aa5e97fb5fa2dc28d5025a35411841ee3d3"
+      },
+      "deepmath": {
+        "checkpoint": {
+          "fingerprint": "f605667657dc8459d77629463873feda27d3bb65d774e5d579458e9259fb3e44",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_math48/merged_hf/step_75"
+        },
+        "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/scores/deepmath.npz",
+        "sha256": "02fa8dad2863fe8363e5a949c915123ba235fa4a6438b2aa70ccf3f64bdaebfc"
+      },
+      "mix": {
+        "checkpoint": {
+          "fingerprint": "abcb07390679d61776f7709bed12652e37fc36b33b4de84918c62271b3e3c805",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_mix48/merged_hf/step_75"
+        },
+        "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/scores/mix.npz",
+        "sha256": "2e271bb5d29503b3f76d0bfd7ec7b5852dd5aa8b311946fb48543e0ca73d1757"
+      },
+      "science": {
+        "checkpoint": {
+          "fingerprint": "46ccccb700dfa9d31a430db38c55b7dd465fa223d985269829ded0bf6c95dcf6",
+          "path": "/path/to/opd-code/results/opd/deepseek_1p5b_nemotron_v1_domain_m48_b256_s100_v1/seed_42/nemo_science48/merged_hf/step_75"
+        },
+        "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/scores/science.npz",
+        "sha256": "001af553b5176b6c6e15b2cefd7b1ce3ccc372f71209e4cf5a2a0031eb55d99d"
+      },
+      "teacher": {
+        "checkpoint": {
+          "fingerprint": "4ea76cbff2e61a36c1ea6c7a703b3df4af1a07ecba6f796f0ee6e5af4d9ea310",
+          "path": "/path/to/opd-code/data/models/opd_nemotron_v1_1p5b_teacher_shared_tokenizer"
+        },
+        "path": "results/analysis/source_domain_functional_recovery_v1/nemotron/initial_probe/scores/teacher.npz",
+        "sha256": "c1d25c1c914465300fc550c06e45a1dd6807f269d58472e6b85630e7951ee897"
+      }
+    },
+    "subspace_labels": [
+      "teacher",
+      "deepmath",
+      "science",
+      "code",
+      "mix"
+    ]
+  },
+  "representation": "centered top-K Fisher vector, identical to fisher_centered_vector; all quantities are exact functions of the Gram matrix of the full flattened vectors, not of any per-probe scalar reduction",
+  "schema_version": "opd_endpoint_collinearity_v1"
+}

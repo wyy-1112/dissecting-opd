@@ -1,0 +1,37 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_qwen3_4b_code_grpo300/student_qwen3_4b_nonthinking",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_aprime_s100": 0.017759828874856515,
+    "teacher_vs_aprime_s25": 0.026435372239171792,
+    "teacher_vs_aprime_s50": 0.020906086750628605,
+    "teacher_vs_aprime_s75": 0.01855483902103573,
+    "teacher_vs_recovery": 0.028543953324278747
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "aprime_s100": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_aprime_v1/train_b256_s100/seed_42/index_15240/merged_hf/step_100",
+    "aprime_s25": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_aprime_v1/train_b256_s100/seed_42/index_15240/merged_hf/step_25",
+    "aprime_s50": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_aprime_v1/train_b256_s100/seed_42/index_15240/merged_hf/step_50",
+    "aprime_s75": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_aprime_v1/train_b256_s100/seed_42/index_15240/merged_hf/step_75",
+    "recovery": "/path/to/opd-code/results/opd/qwen3_4b_code_aprime_to_m48_recovery_b256_s100_v1/train_b256_s100/seed_42/recovery/merged_hf/step_100",
+    "teacher": "/path/to/opd-code/data/models/opd_qwen3_4b_code_grpo300/teacher_qwen3_4b_code_grpo_step300"
+  },
+  "norms": {
+    "aprime_s100": 4.572264162900529,
+    "aprime_s25": 3.0868078670604895,
+    "aprime_s50": 3.9582395631425906,
+    "aprime_s75": 4.382253329935597,
+    "recovery": 5.707749942504851,
+    "teacher": 0.5893031504416629
+  },
+  "parameter_count": 4022468096,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

@@ -1,0 +1,74 @@
+name: openr1_code_full_s50
+group: support_size
+pair: code_grpo400_to_qwen3_1p7b_sft
+train_schedule:
+  ids: ${REPO_ROOT}/data/schedules/support_size/code_grpo400_to_qwen3_1p7b_sft/openr1_code_full_s50
+  pools:
+  - ${REPO_ROOT}/data/pools/openr1_code.parquet
+  distinct_prompts: 6519
+  rows_consumed: 12800
+env:
+  TRAIN_FILE: ${REPO_ROOT}/data/schedules/support_size/code_grpo400_to_qwen3_1p7b_sft/openr1_code_full_s50/schedule.parquet
+  DEV_FILE: ${REPO_ROOT}/data/val/openr1_code_dev.parquet
+  TRAIN_MAX_SAMPLES: '12800'
+  DATA_SHUFFLE: 'False'
+  TRAIN_BATCH_SIZE: '256'
+  MAX_PROMPT_LENGTH: '4096'
+  MAX_RESPONSE_LENGTH: '4096'
+  TRAINING_SEED: '42'
+  STUDENT_MODEL: ${MODEL_ROOT}/qwen3_1p7b_base_sft554
+  STUDENT_TOKENIZER: ${MODEL_ROOT}/qwen3_1p7b_base_sft554
+  ACTOR_LR: 1e-05
+  PPO_MINI_BATCH_SIZE: '256'
+  ACTOR_PPO_EPOCHS: '1'
+  PPO_MAX_TOKEN_LEN_PER_GPU: '8192'
+  FSDP_OPTIMIZER_OFFLOAD: 'False'
+  FSDP_USE_ORIG_PARAMS: 'False'
+  STUDENT_ROLLOUT_GPU_MEMORY_UTILIZATION: '0.08'
+  ROLLOUT_ENFORCE_EAGER: 'False'
+  STUDENT_MAX_MODEL_LEN: '8192'
+  ROLLOUT_N: '1'
+  ROLLOUT_TEMPERATURE: '1.0'
+  ROLLOUT_TOP_P: '1.0'
+  ROLLOUT_MAX_NUM_SEQS: '256'
+  ROLLOUT_MAX_NUM_BATCHED_TOKENS: '16384'
+  ROLLOUT_CALCULATE_LOG_PROBS: 'False'
+  LOG_PROB_MICRO_BATCH_SIZE_PER_GPU: '2'
+  LOG_PROB_MAX_TOKEN_LEN_PER_GPU: '8192'
+  VAL_TEMPERATURE: '0.6'
+  VAL_TOP_P: '0.95'
+  VAL_N: '1'
+  ROLLOUT_IS: token
+  ROLLOUT_IS_THRESHOLD: '2.0'
+  ROLLOUT_IS_BATCH_NORMALIZE: 'False'
+  ROLLOUT_BYPASS_MODE: 'False'
+  DISTILLATION_ENABLE_RESOURCE_POOL: 'False'
+  TEACHER_GPUS_PER_NODE: '8'
+  TEACHER_NNODES: '1'
+  TEACHER_MODEL: ${MODEL_ROOT}/code_grpo400_qwen3_1p7b
+  TEACHER_TP: '1'
+  TEACHER_GPU_MEMORY_UTILIZATION: '0.14'
+  TEACHER_MAX_MODEL_LEN: '9216'
+  TEACHER_MAX_NUM_BATCHED_TOKENS: '16384'
+  TEACHER_MAX_NUM_SEQS: '64'
+  TEACHER_TEMPERATURE: '1'
+  REWARD_FN: ${REPO_ROOT}/opd/rewards/code_reward.py
+  REWARD_FN_NAME: compute_score_compact
+  REWARD_TIMEOUT: '3.0'
+  REWARD_MAX_TESTS: '10'
+  REWARD_MANAGER: naive
+  REWARD_WORKERS: '16'
+  STUDENT_GPUS_PER_NODE: '8'
+  STUDENT_NNODES: '1'
+  VAL_BEFORE_TRAIN: 'True'
+  SAVE_FREQ: '10'
+  TEST_FREQ: '10'
+  TOTAL_EPOCHS: '1'
+  TOTAL_TRAINING_STEPS: '50'
+  OUTPUT_DIR: ${OUTPUT_ROOT}/support_size/code_grpo400_to_qwen3_1p7b_sft/openr1_code_full_s50
+  RESUME_MODE: disable
+  LOG_VAL_GENERATIONS: '16'
+  ROLLOUT_DATA_DIR: ${OUTPUT_ROOT}/support_size/code_grpo400_to_qwen3_1p7b_sft/openr1_code_full_s50/rollouts
+  VALIDATION_DATA_DIR: ${OUTPUT_ROOT}/support_size/code_grpo400_to_qwen3_1p7b_sft/openr1_code_full_s50/validation_generations
+  WANDB_PROJECT: opd-code-diversity
+  WANDB_EXPERIMENT: qwen3-1p7b-t400-s554-code-diversity-full-b256-s50-seed42

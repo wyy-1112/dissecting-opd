@@ -1,0 +1,31 @@
+{
+  "base": "/tmp/opd_models_deepseek_r1_light_r1_7b/student",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_dapo_m8": 0.07907386528199258,
+    "teacher_vs_deepmath_m8": 0.07563580016525946,
+    "teacher_vs_light_stage2": 0.13862971911977653
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "dapo_m8": "/tmp/light_r1_scatter_v1/dapo_m8",
+    "deepmath_m8": "/tmp/light_r1_scatter_v1/deepmath_m8",
+    "light_stage2": "/tmp/light_r1_scatter_v1/light_stage2",
+    "teacher": "/tmp/opd_models_deepseek_r1_light_r1_7b/teacher"
+  },
+  "norms": {
+    "dapo_m8": 5.972240689075588,
+    "deepmath_m8": 5.647470136162071,
+    "light_stage2": 7.013468444500872,
+    "teacher": 23.96677002928937
+  },
+  "parameter_count": 7615616512,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

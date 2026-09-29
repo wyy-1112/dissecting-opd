@@ -1,0 +1,103 @@
+schema_version: code_sft_v2.0
+seed: 20260717
+total_samples: 80000
+val_samples: 512
+max_seq_len: 4096
+tokenizer_path: ${MODEL_ROOT}/qwen3_1p7b_base_chat
+out_sft_dir: ${OUTPUT_ROOT}/sft_code_data
+
+# V2 pilot deliberately trains direct code output only. It does not supervise
+# <think>, </think>, /think, /no_think, explanations, or multiple code blocks.
+function_instruction: >-
+  Complete the requested Python function. Preserve the required function or
+  class interface exactly. Return only the final implementation inside one
+  ```python code block.
+competitive_instruction: >-
+  Solve the programming problem in Python. Preserve any required starter-code
+  interface. Return only the complete final program inside one ```python code
+  block.
+
+sources:
+  open_code_instruct:
+    enable: true
+    hf_id: nvidia/OpenCodeInstruct
+    revision: 8f3ba5bafe4d6e8db46082cf7ae6741bc370604d
+    split: train
+    target_count: 28000
+    oversample: 1.45
+    scan_limit: 300000
+    shuffle_buffer: 20000
+    license: CC-BY-4.0
+    priority: 0
+
+  self_oss_sc2:
+    enable: true
+    hf_id: bigcode/self-oss-instruct-sc2-exec-filter-50k
+    revision: 356bb069eee815daa6e23e9a282eeefe1490ad44
+    split: train
+    target_count: 28000
+    oversample: 1.35
+    scan_limit: 60000
+    shuffle_buffer: 10000
+    license: ODC-BY-1.0
+    priority: 1
+
+  rstar_seed_verified:
+    enable: true
+    hf_id: microsoft/rStar-Coder
+    revision: 3a7a0a0636ec96e3c1ec42ebe79ade467caa040d
+    config: seed_sft
+    split: train
+    target_count: 8000
+    oversample: 1.5
+    scan_limit: 100000
+    shuffle_buffer: 256
+    license: CC-BY-4.0
+    priority: 2
+
+  rstar_synthetic_code:
+    enable: true
+    hf_id: microsoft/rStar-Coder
+    revision: 3a7a0a0636ec96e3c1ec42ebe79ade467caa040d
+    config: synthetic_sft
+    split: train
+    target_count: 8000
+    oversample: 1.5
+    scan_limit: 80000
+    shuffle_buffer: 256
+    license: CC-BY-4.0
+    priority: 3
+
+  magicoder_oss_python:
+    enable: true
+    hf_id: ise-uiuc/Magicoder-OSS-Instruct-75K
+    revision: 5f839b1f368a76b161028bb9edff055db34022b2
+    split: train
+    target_count: 8000
+    oversample: 1.5
+    scan_limit: 100000
+    shuffle_buffer: 2000
+    license: MIT
+    priority: 4
+
+dedup:
+  enable: true
+  shingle_size: 5
+  simhash_bands: 4
+  simhash_hamming_threshold: 3
+
+decontam:
+  enable: true
+  ngram_size: 13
+  containment_threshold: 0.50
+  targets:
+    - name: humaneval_plus
+      url: https://github.com/evalplus/humanevalplus_release/releases/download/v0.1.10/HumanEvalPlus.jsonl.gz
+      file: HumanEvalPlus-v0.1.10.jsonl
+    - name: mbpp_plus
+      url: https://github.com/evalplus/mbppplus_release/releases/download/v0.2.0/MbppPlus.jsonl.gz
+      file: MbppPlus-v0.2.0.jsonl
+    - name: livecodebench_v6_only
+      hf_repo: livecodebench/code_generation_lite
+      hf_revision: 0fe84c3912ea0c4d4a78037083943e8f0c4dd505
+      hf_file: test6.jsonl

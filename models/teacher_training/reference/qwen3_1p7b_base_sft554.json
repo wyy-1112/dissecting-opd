@@ -1,0 +1,229 @@
+{
+ "model": {
+  "_target_": "verl.workers.config.HFModelConfig",
+  "path": "/path/to/models/Qwen3-1.7B-Base-chat",
+  "hf_config_path": null,
+  "tokenizer_path": null,
+  "use_shm": false,
+  "trust_remote_code": false,
+  "custom_chat_template": null,
+  "external_lib": null,
+  "override_config": {},
+  "enable_gradient_checkpointing": true,
+  "enable_activation_offload": false,
+  "use_remove_padding": true,
+  "lora_rank": 0,
+  "lora_alpha": 16,
+  "target_modules": "all-linear",
+  "exclude_modules": null,
+  "lora_adapter_path": null,
+  "use_liger": false,
+  "use_fused_kernels": false,
+  "fused_kernel_options": {
+   "impl_backend": "torch"
+  },
+  "tiled_mlp": {
+   "enabled": false,
+   "num_shards": 4
+  },
+  "mtp": {
+   "_target_": "verl.workers.config.MtpConfig",
+   "enable": false,
+   "enable_train": false,
+   "enable_rollout": false,
+   "detach_encoder": false,
+   "mtp_loss_scaling_factor": 0.1,
+   "speculative_algorithm": "EAGLE",
+   "speculative_num_steps": 3,
+   "speculative_eagle_topk": 1,
+   "speculative_num_draft_tokens": 4,
+   "method": "mtp",
+   "num_speculative_tokens": 1
+  },
+  "lora": {
+   "type": "lora",
+   "merge": false,
+   "rank": 0,
+   "alpha": 32,
+   "dropout": 0.0,
+   "target_modules": [
+    "linear_qkv",
+    "linear_proj",
+    "linear_fc1",
+    "linear_fc2"
+   ],
+   "exclude_modules": [],
+   "dropout_position": "pre",
+   "lora_A_init_method": "xavier",
+   "lora_B_init_method": "zero",
+   "a2a_experimental": false,
+   "dtype": null,
+   "adapter_path": null,
+   "freeze_vision_model": true,
+   "freeze_vision_projection": true,
+   "freeze_language_model": true
+  }
+ },
+ "engine": {
+  "_target_": "verl.workers.config.FSDPEngineConfig",
+  "wrap_policy": {
+   "min_num_params": 0
+  },
+  "param_offload": false,
+  "optimizer_offload": false,
+  "offload_policy": false,
+  "reshard_after_forward": true,
+  "fsdp_size": -1,
+  "forward_prefetch": false,
+  "model_dtype": "fp32",
+  "use_orig_params": false,
+  "seed": 42,
+  "full_determinism": false,
+  "ulysses_sequence_parallel_size": 1,
+  "entropy_from_logits_with_chunking": false,
+  "use_torch_compile": true,
+  "entropy_checkpointing": false,
+  "forward_only": false,
+  "strategy": "fsdp",
+  "dtype": "bfloat16",
+  "qat": {
+   "_target_": "verl.workers.config.QATEngineConfig",
+   "enable": false,
+   "mode": "w4a16",
+   "group_size": 16,
+   "ignore_patterns": [
+    "lm_head",
+    "embed_tokens",
+    "re:.*mlp.gate$"
+   ],
+   "activation_observer": "static_minmax",
+   "quantization_config_path": null
+  }
+ },
+ "optim": {
+  "_target_": "verl.workers.config.FSDPOptimizerConfig",
+  "optimizer": "AdamW",
+  "optimizer_impl": "torch.optim",
+  "lr": 3e-06,
+  "lr_warmup_steps_ratio": 0.03,
+  "total_training_steps": -1,
+  "weight_decay": 0.01,
+  "lr_warmup_steps": -1,
+  "betas": [
+   0.9,
+   0.999
+  ],
+  "clip_grad": 1.0,
+  "min_lr_ratio": 0.0,
+  "num_cycles": 0.5,
+  "lr_scheduler_type": "cosine",
+  "zero_indexed_step": true,
+  "warmup_style": null,
+  "override_optimizer_config": null
+ },
+ "profiler": {
+  "_target_": "verl.utils.profiler.ProfilerConfig",
+  "tool": "torch",
+  "enable": false,
+  "all_ranks": false,
+  "ranks": [],
+  "save_path": "outputs/profile",
+  "tool_config": {
+   "npu": {
+    "_target_": "verl.utils.profiler.config.NPUToolConfig",
+    "contents": [],
+    "level": "level0",
+    "analysis": true,
+    "discrete": false,
+    "name": "npu"
+   },
+   "nsys": {
+    "_target_": "verl.utils.profiler.config.NsightToolConfig",
+    "discrete": "${oc.select:global_profiler.global_tool_config.nsys.discrete}",
+    "name": "nsight"
+   },
+   "torch": {
+    "_target_": "verl.utils.profiler.config.TorchProfilerToolConfig",
+    "contents": [],
+    "discrete": false,
+    "name": "torch"
+   },
+   "torch_memory": {
+    "_target_": "verl.utils.profiler.config.TorchMemoryToolConfig",
+    "trace_alloc_max_entries": "${oc.select:global_profiler.global_tool_config.torch_memory.trace_alloc_max_entries,100000}",
+    "stack_depth": "${oc.select:global_profiler.global_tool_config.torch_memory.stack_depth,32}",
+    "name": "torch_memory"
+   },
+   "precision_debugger": {
+    "_target_": "verl.utils.profiler.config.PrecisionDebuggerToolConfig",
+    "config_path": "${oc.select:global_profiler.global_tool_config.precision_debugger.config_path,null}",
+    "steps": null,
+    "stages": "${oc.select:global_profiler.global_tool_config.precision_debugger.stages,null}",
+    "name": "precision_debugger"
+   }
+  }
+ },
+ "data": {
+  "train_batch_size": 128,
+  "micro_batch_size_per_gpu": 4,
+  "max_token_len_per_gpu": 8192,
+  "use_dynamic_bsz": true,
+  "train_files": "/path/to/opd-code/data/sft_v2_pilot/train.parquet",
+  "val_files": "/path/to/opd-code/data/sft_v2_pilot/val.parquet",
+  "train_max_samples": -1,
+  "val_max_samples": -1,
+  "messages_key": "messages",
+  "tools_key": "tools",
+  "enable_thinking_key": "enable_thinking",
+  "enable_thinking_default": "none",
+  "pad_mode": "no_padding",
+  "max_length": 4096,
+  "truncation": "error",
+  "balance_dp_token": false,
+  "custom_cls": {
+   "path": null,
+   "name": null
+  },
+  "use_shm": false,
+  "apply_chat_template_kwargs": {},
+  "num_workers": 8,
+  "ignore_input_ids_mismatch": false
+ },
+ "checkpoint": {
+  "_target_": "verl.trainer.config.CheckpointConfig",
+  "save_contents": [
+   "model",
+   "optimizer",
+   "hf_model",
+   "extra"
+  ],
+  "load_contents": "${checkpoint.save_contents}",
+  "mbridge_config": {}
+ },
+ "trainer": {
+  "default_local_dir": "/path/to/opd-code/results/sft/qwen3-1p7b-v2-pilot",
+  "default_hdfs_dir": null,
+  "project_name": "opd-sft",
+  "experiment_name": "opd-code-sft-v2-pilot",
+  "total_epochs": 1,
+  "total_training_steps": null,
+  "logger": [
+   "console",
+   "wandb"
+  ],
+  "seed": 1,
+  "save_freq": 138,
+  "test_freq": 138,
+  "max_ckpt_to_keep": null,
+  "balance_batch": true,
+  "resume_mode": "auto",
+  "resume_from_path": null,
+  "device": "cuda",
+  "nnodes": 1,
+  "n_gpus_per_node": 1,
+  "profile_interval": [
+   -1,
+   -1
+  ]
+ }
+}

@@ -1,0 +1,28 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_dapo_m8": 0.1344874844639195,
+    "teacher_vs_deepmath_m8": 0.1310241771019829
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "dapo_m8": "/path/to/opd-code/results/opd/deepseek_1p5b_deepscaler_teacher_dapo_m8_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_65",
+    "deepmath_m8": "/path/to/opd-code/results/opd/deepseek_1p5b_deepscaler_teacher_deepmath_m8_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_65",
+    "teacher": "/path/to/opd-code/data/models/opd_deepscaler_1p5b_teacher_r1_distill_tokenizer"
+  },
+  "norms": {
+    "dapo_m8": 1.8424815328518123,
+    "deepmath_m8": 1.720119111121867,
+    "teacher": 1.829881704802565
+  },
+  "parameter_count": 1777088000,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

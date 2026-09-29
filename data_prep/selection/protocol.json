@@ -1,0 +1,79 @@
+{
+  "schema_version": "opd_selection_benchmark_protocol_v1",
+  "status": "frozen_before_new_training",
+  "primary_question": "At fixed candidate pool, support size, presentation budget and training seed, does a preregistered selection rule improve the four-benchmark mean or reduce lower-tail risk relative to uniform random support draws?",
+  "common_rules": {
+    "primary_candidate_pool_size": 384,
+    "support_sizes": [8, 48],
+    "training_seed_first_pass": 42,
+    "uniform_support_seeds_first_pass": [42],
+    "preferred_uniform_support_seeds_if_replication_is_needed": [42, 43, 44, 45, 46],
+    "replication_policy": "screen every method and support size once with selection seed 42 and training seed 42; add support or training replicates only after the complete first-pass matrix is available",
+    "support_and_training_seed_are_distinct_fields": true,
+    "report_all_support_draws": true,
+    "primary_metrics": ["Math", "GPQA-D", "HumanEval+", "LiveCodeBench-v6", "equal_benchmark_mean"],
+    "selection_cost_unit": "GPU-hours measured from selection-job wall time times allocated GPUs; CPU-only selection is reported as 0 GPU-hours with CPU time retained separately",
+    "training_budget_match": "same optimizer steps, batch size and balanced number of prompt presentations within each setting",
+    "token_accounting": ["generated training response tokens", "training prompt tokens", "evaluation output tokens"],
+    "uncertainty": "task-level bootstrap for benchmark scores; support-seed distribution shown without treating three draws as proof of equivalence"
+  },
+  "methods": {
+    "uniform_random": "PCG64 permutation of the exact candidate pool; take a nested M=8 then M=48 prefix without replacement",
+    "stratified_random": "proportional source and prompt-length strata, plus frozen pretraining difficulty strata where that field exists; random within strata",
+    "semantic_diversity": "normalized Qwen3-Embedding-0.6B prompt embeddings; deterministic farthest-first traversal initialized at the candidate nearest the global centroid",
+    "hard_selection": "lowest initial-student pass rate under a frozen K=8 rollout per candidate; deterministic hash tie break",
+    "shortest": "lowest mean generated response length under the same frozen K=8 initial-student rollout",
+    "cost_d_opt": "existing reliability-aware gradient sketch and cost-aware greedy D-opt implementation, extended from M=8 to M=48 without changing its score definition"
+  },
+  "settings": {
+    "justrl_deepmath": {
+      "student": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "teacher": "JustRL-DeepSeek-1.5B",
+      "candidate_pool": "existing frozen 384-candidate reliability/SVD cohort selected independently before method outcomes",
+      "steps": 65,
+      "batch_size": 256,
+      "existing_reusable_supports_only": ["candidate384 shortest M8", "candidate384 cost-aware D-opt M8"],
+      "endpoint_policy": "all primary JustRL/DeepSeek selection endpoints are retrained from the same initial student for exactly 65 optimizer steps; prior 100-step endpoints are external controls only",
+      "primary_table_warning": "The full-pool uniform M8 and candidate3840 stratified M48 are external controls, not matched entries in the candidate384 six-method table."
+    },
+    "code_eurus": {
+      "student": "Qwen3-4B non-thinking",
+      "teacher": "Qwen3-4B Code GRPO-300",
+      "source_pool": "data/rl/eurus_code_grpo/train.parquet",
+      "source_pool_rows": 22618,
+      "steps": 100,
+      "batch_size": 256,
+      "existing_reusable": ["full-pool source/length-stratified M48 seed42"],
+      "external_control": "historical M1/M48/M3840/full endpoints at step 100 use the same teacher-student pair and downstream Code evaluation protocol",
+      "endpoint_policy": "all primary Code selection endpoints use 100 optimizer steps. The earlier 50-step screen is retained as an intermediate checkpoint only: Eurus-dev peaked near step 50, but that in-pool n=2 curve does not establish convergence of HumanEval+, MBPP+, or LiveCodeBench, while all historical approximately-60-point Code references were evaluated at step 100"
+    },
+    "qwen30b_deepmath": {
+      "student": "Qwen3-4B non-thinking",
+      "teacher": "Qwen3-30B-A3B-Instruct-2507",
+      "source_pool": "the frozen DeepMath 3840 cohort used by the completed stratified M48 arm",
+      "source_pool_rows": 3840,
+      "steps": 25,
+      "batch_size": 256,
+      "existing_reusable": ["source/length/difficulty-stratified M48 seed42"],
+      "external_control": "historical stratified M48 step-15 endpoint is an external control only",
+      "endpoint_policy": "all primary 30B-to-4B M48 selection endpoints use 25 optimizer steps; two independent step-25 pilot trajectories still reduced on-policy k1 by about 19-22% from step 15 and changed the two-AIME validation mean from 0.533 to 0.542 and from 0.500 to 0.533, respectively"
+    }
+  },
+  "wave_1": {
+    "active": [
+      "JustRL candidate384 uniform M8 support seed42, train seed42, 65 steps, node7"
+    ],
+    "completed": [
+      "JustRL candidate384 cost-aware D-opt M8, train seed42, 65 steps",
+      "JustRL candidate384 uniform M8 support seed44, train seed42, 65 steps; retained as an unplanned extra support replicate"
+    ],
+    "not_retried": [
+      "JustRL candidate384 uniform M8 support seed43 failed in vLLM with a CUDA index-select device assertion; omitted under the single-seed first-pass policy"
+    ],
+    "queued": [
+      "remaining JustRL/DeepSeek 65-step single-seed selection arms, beginning with shortest M8 and uniform M48",
+      "Code Eurus arms use the history-matched 100-step endpoint after the DeepSeek wave; completed step-50 arms continue from their exact model/optimizer/RNG checkpoints",
+      "Qwen30B DeepMath arms use the preregistered convergence-based 25-step endpoint after the Code wave"
+    ]
+  }
+}

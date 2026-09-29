@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "teacher_weights_source": "/path/to/models/DeepScaleR-1.5B-Preview",
+  "prompt_tokenizer_source": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b",
+  "reason": "OPD feeds the student-rendered token IDs to both homologous models; probe encodings were verified identical.",
+  "teacher_weights_unchanged": true
+}

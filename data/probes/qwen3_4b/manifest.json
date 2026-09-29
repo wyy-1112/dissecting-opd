@@ -1,0 +1,224 @@
+{
+  "base_checkpoint": {
+    "fingerprint": "97fb23f1860189c17bb5f709a28b6204abef6052c589b9641abcc1b74d11d856",
+    "path": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b"
+  },
+  "cohort": {
+    "chosen_tokens": 73823,
+    "path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/cohort.jsonl",
+    "records": 128,
+    "sha256": "dea3595a71944288594453b0b57826ad8b3be4c7feda102b3c7a7ba325ab908e"
+  },
+  "exact_token_contract": "Every checkpoint is scored on the stored prompt_token_ids and response_token_ids; no scoring-time tokenization is permitted.",
+  "manifest_payload_sha256": "33f2a8933c04634c61ee918f37f367252d859f479270f2e65d0a6ba1a0984dd4",
+  "schema_version": "opd_function_space_probe_manifest_v1",
+  "selection": {
+    "domain_chosen_tokens": {
+      "gpqa": 23483,
+      "humaneval_plus": 10667,
+      "livecodebench_v6": 11138,
+      "math": 28535
+    },
+    "domain_distinct_prompts": {
+      "gpqa": 32,
+      "humaneval_plus": 32,
+      "livecodebench_v6": 32,
+      "math": 32
+    },
+    "domain_records": {
+      "gpqa": 32,
+      "humaneval_plus": 32,
+      "livecodebench_v6": 32,
+      "math": 32
+    },
+    "max_response_tokens": 1024,
+    "max_sequence_tokens": 2048,
+    "per_domain": 32,
+    "policy": "sha256-ranked; maximize distinct prompts before selecting additional trajectories from a prompt",
+    "required_domains": [
+      "math",
+      "gpqa",
+      "humaneval_plus",
+      "livecodebench_v6"
+    ],
+    "seed": 20260821
+  },
+  "sources": [
+    {
+      "adapter": "gradient",
+      "candidates": 768,
+      "domain": "math",
+      "source": {
+        "bytes": 6092129,
+        "kind": "file",
+        "path": "/path/to/opd-code/data/opd/gradient_spectrum_v1/cohort/cohort.jsonl",
+        "sha256": "b38daaf390d0c600acbdb9171da5ac0fc9c95f5899c58cca97d3576d4538ec1c"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1584,
+      "domain": "gpqa",
+      "source": {
+        "files": [
+          {
+            "bytes": 640564,
+            "name": "shard_0.jsonl",
+            "sha256": "14ad0fe396670d4fff7952fd05a4e707bbd4c1fae07be0fa56df2e4c5f57935b"
+          },
+          {
+            "bytes": 517890,
+            "name": "shard_1.jsonl",
+            "sha256": "2c4d858d67d10fb5a061c913b6a4f95400230978c0ab9b74d7b19d523e160627"
+          },
+          {
+            "bytes": 673910,
+            "name": "shard_2.jsonl",
+            "sha256": "a7c7e2dcfe0fb7f7332f1a26d918b17c46f8cf9075f027c57efeb11f36312092"
+          },
+          {
+            "bytes": 582545,
+            "name": "shard_3.jsonl",
+            "sha256": "c5458da8cf4436b147b20f01b244784f871a2600eecd36a22aef54e29d634f7c"
+          },
+          {
+            "bytes": 686303,
+            "name": "shard_4.jsonl",
+            "sha256": "4753835c260822d43b65057d6685caa10d856587eb9ed9fa022dbf0ebb1b3930"
+          },
+          {
+            "bytes": 582436,
+            "name": "shard_5.jsonl",
+            "sha256": "6c5fb52a22d17beda50718c103b627c9df2f98f3ec45d9378a9ad4a7bbd52de6"
+          },
+          {
+            "bytes": 563594,
+            "name": "shard_6.jsonl",
+            "sha256": "474e3be4158d91e91dc9b882bdd4948485943da212d65429157413b7e65d6090"
+          },
+          {
+            "bytes": 500247,
+            "name": "shard_7.jsonl",
+            "sha256": "6355118f871cb9f09345b68a8b94e5d7d47611bff01d8df3870645752b86d59b"
+          }
+        ],
+        "fingerprint": "df09752c9685b95f50ff96bd1ae57cb2900b857f2247963c9b47494a5b7b8bb5",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/qwen3_4b_base/gpqa_diamond"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1312,
+      "domain": "humaneval_plus",
+      "source": {
+        "files": [
+          {
+            "bytes": 692500,
+            "name": "evalplus_samples.jsonl",
+            "sha256": "66060b5e342b21fa25a602935a3f66f962432a9529c3d6df4c81693bc0b0f7ae"
+          },
+          {
+            "bytes": 215148,
+            "name": "shard_0.jsonl",
+            "sha256": "6fbd3ddfb2aec6aada2cbfdd6f6558738056dcc03bc296d093b3f0d36b74e879"
+          },
+          {
+            "bytes": 245046,
+            "name": "shard_1.jsonl",
+            "sha256": "fbd5b80d0caabf042f50470020af4a0b2db3d4476b7ed11bb8e0dee7902252d7"
+          },
+          {
+            "bytes": 216117,
+            "name": "shard_2.jsonl",
+            "sha256": "979140eef7e6e291d0a7fb03d486f76b70469e4457b22ab8df5df16f7a56af3d"
+          },
+          {
+            "bytes": 228830,
+            "name": "shard_3.jsonl",
+            "sha256": "e4ed133a9ed94793e1e5cf467bce50cb24186df5e206ac412bd55de23035d250"
+          },
+          {
+            "bytes": 213071,
+            "name": "shard_4.jsonl",
+            "sha256": "add3e95e89ce1f7cc1e55e0213b93093b3415992736806d1ba921c3ff8c98255"
+          },
+          {
+            "bytes": 184508,
+            "name": "shard_5.jsonl",
+            "sha256": "8af950075cecda33f05b1bb935d6d84c05be7df346db19e2714d3665dc421dfc"
+          },
+          {
+            "bytes": 214723,
+            "name": "shard_6.jsonl",
+            "sha256": "3719bddf0be91e4b98fa9b2196a011d3d3e0f374888c3d925a42bb59c9a12049"
+          },
+          {
+            "bytes": 199702,
+            "name": "shard_7.jsonl",
+            "sha256": "fae7d584a65199b27624e4429b2beef5a16072e787585b02f1073a9fd6ece42b"
+          }
+        ],
+        "fingerprint": "25d2daedb6c00c35e72b0da2df2e0f1cc5c9c67ae4d6ab8027268139ba8d05d4",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/qwen3_4b_base/humaneval_plus"
+      }
+    },
+    {
+      "adapter": "ood_eval",
+      "candidates": 1400,
+      "domain": "livecodebench_v6",
+      "source": {
+        "files": [
+          {
+            "bytes": 267287,
+            "name": "shard_0.jsonl",
+            "sha256": "3f5d6558ce794a34a8287cc3a2acef1fea49753e062bd16361cd5a22d3eef230"
+          },
+          {
+            "bytes": 488805,
+            "name": "shard_1.jsonl",
+            "sha256": "dbf7f9d645a32198dc3d8f8de508efc2f7332bfa8a4796e1c0805b32af06ba04"
+          },
+          {
+            "bytes": 331304,
+            "name": "shard_2.jsonl",
+            "sha256": "184140bdba5143a70503a79074003caff7b030ac0f5abbb5c5ef469c21913bc1"
+          },
+          {
+            "bytes": 301236,
+            "name": "shard_3.jsonl",
+            "sha256": "514de5e80f032cb8c554f4701f00deb8f99802bfa5aa29295bcdfaff925dcb38"
+          },
+          {
+            "bytes": 429648,
+            "name": "shard_4.jsonl",
+            "sha256": "ec5e6a929a9c98599821ea024fec837d9d6ac3b9627a0f86e594ef015ed48996"
+          },
+          {
+            "bytes": 451487,
+            "name": "shard_5.jsonl",
+            "sha256": "7e3cb195cb3cbb5310f30817a31b45b192cdce1a822f45444abe899af822f532"
+          },
+          {
+            "bytes": 323683,
+            "name": "shard_6.jsonl",
+            "sha256": "0caf57bf3f8452c5fa80844ccd502a981c464a9fdd1dbd9d9c648db68981fd7c"
+          },
+          {
+            "bytes": 532376,
+            "name": "shard_7.jsonl",
+            "sha256": "0cf78521e296c98e93f8d7515315cd4638b54dd96df568926affc25a747d3906"
+          }
+        ],
+        "fingerprint": "cd240587624d27bcd93d4bf2e70fbc5b3fb0d57281b101ae8d2e7534bafa4ae4",
+        "kind": "jsonl_directory",
+        "path": "/path/to/opd-code/results/ood_eval/qwen3_4b_base/livecodebench_v6"
+      }
+    }
+  ],
+  "tokenizer_identity": {
+    "definition": "sha256(tokenizer.json)",
+    "tokenizer_json_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  }
+}

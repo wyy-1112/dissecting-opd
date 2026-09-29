@@ -1,0 +1,5 @@
+outputs/
+__pycache__/
+*.pyc
+*.tmp
+data/schedules/**/schedule.parquet

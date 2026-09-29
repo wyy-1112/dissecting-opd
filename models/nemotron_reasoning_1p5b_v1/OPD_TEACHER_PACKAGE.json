@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "teacher_repo": "nvidia/Nemotron-Research-Reasoning-Qwen-1.5B",
+  "requested_revision": "v1",
+  "resolved_commit": "b89048893f95246c6b5749b287f0049e6df42ee9",
+  "teacher_weights_source": "/path/to/models/Nemotron-Research-Reasoning-Qwen-1.5B-v1",
+  "teacher_weight_sha256": {
+    "model.safetensors": "803cd80b2bd8142d1711496d1e707aaf4541c0e468747daca928c769708b7f94"
+  },
+  "prompt_tokenizer_source": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b",
+  "source_v1_tokenizer_verified_equivalent": true,
+  "teacher_weights_unchanged": true
+}

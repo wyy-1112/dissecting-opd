@@ -1,0 +1,2 @@
+rank,item_sha256,prompt_sha256,data_source,source_index,source_split,first_position,count
+0,c059381b0f6fbcff98d30cdc0a415e77b1f94f74f26f63eb69c2083aac173cdd,33eaea442a46728ebd4d08697d84fb854060fcbe05379ddd53c24e973e0275cf,GSM8K,3236,train,0,3840

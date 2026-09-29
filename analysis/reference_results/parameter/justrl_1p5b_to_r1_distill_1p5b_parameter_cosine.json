@@ -1,0 +1,49 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/student_deepseek_r1_distill_qwen_1p5b",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_dapo_full_s50": 0.08098915690289876,
+    "teacher_vs_dapo_m1": 0.0439418965313479,
+    "teacher_vs_dapo_m2": 0.06912684163831458,
+    "teacher_vs_dapo_m384": 0.09062845183274676,
+    "teacher_vs_dapo_m4": 0.07345382344224252,
+    "teacher_vs_dapo_m8": 0.0768654465077335,
+    "teacher_vs_deepmath_m1": 0.046551752828255646,
+    "teacher_vs_deepmath_m3840": 0.08785231538282426,
+    "teacher_vs_deepmath_m8": 0.062249957267077334
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "dapo_full_s50": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_17170/merged_hf/step_50",
+    "dapo_m1": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_1/merged_hf/step_100",
+    "dapo_m2": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_2/merged_hf/step_100",
+    "dapo_m384": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_384/merged_hf/step_100",
+    "dapo_m4": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_4/merged_hf/step_100",
+    "dapo_m8": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_dapo_diversity_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_100",
+    "deepmath_m1": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_math_diversity_b256_s100_v1/train_b256_s100/seed_42/support_1/merged_hf/step_100",
+    "deepmath_m3840": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_math_diversity_b256_s100_v1/train_b256_s100/seed_42/support_3840/merged_hf/step_100",
+    "deepmath_m8": "/path/to/opd-code/results/opd/deepseek_1p5b_justrl_deepmath_random8_b256_s100_v1/train_b256_s100/seed_42/support_8/merged_hf/step_100",
+    "teacher": "/path/to/opd-code/data/models/opd_deepseek_r1_justrl_1p5b/teacher_justrl_deepseek_1p5b"
+  },
+  "norms": {
+    "dapo_full_s50": 3.9056223449638328,
+    "dapo_m1": 2.4110341638195827,
+    "dapo_m2": 3.2944584014071583,
+    "dapo_m384": 4.25547959902502,
+    "dapo_m4": 3.3651679986799845,
+    "dapo_m8": 3.5089907951921204,
+    "deepmath_m1": 3.339966337556451,
+    "deepmath_m3840": 4.177813981117161,
+    "deepmath_m8": 4.095601232753581,
+    "teacher": 11.22952796784074
+  },
+  "parameter_count": 1777088000,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

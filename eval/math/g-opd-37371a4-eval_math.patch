@@ -1,0 +1,47 @@
+diff --git a/math_eval/eval_math.py b/math_eval/eval_math.py
+index 84b6628..5e672af 100644
+--- a/math_eval/eval_math.py
++++ b/math_eval/eval_math.py
+@@ -95,20 +95,41 @@ def main():
+     parser.add_argument("--end_idx", type=int, default=-1)
+     parser.add_argument("--seed", type=int, default=42)
+     parser.add_argument("--enable_thinking", action="store_true")
++    # Qwen recommends top_k=20 and min_p=0 alongside temperature 0.6 / top_p 0.95 for thinking
++    # mode.  Defaults leave sampling exactly as before so earlier numbers reproduce.
++    parser.add_argument("--top_k", type=int, default=-1)
++    parser.add_argument("--min_p", type=float, default=0.0)
++    parser.add_argument("--max_model_len", type=int, default=None)
++    parser.add_argument(
++        "--dtype",
++        type=str,
++        default="auto",
++        choices=("auto", "float32", "float16", "bfloat16"),
++        help="explicit vLLM model dtype; use float32 for precision-sensitive checkpoint scaling",
++    )
++    # Four of these run side by side, two GPUs each.  vLLM's parent process holds a CUDA context
++    # on its own devices before the workers profile free memory, so 0.95 can fail to start.
++    parser.add_argument("--gpu_memory_utilization", type=float, default=0.95)
+     args = parser.parse_args()
+     
+ 
+     toker = AutoTokenizer.from_pretrained(args.model_path)
+     args.model_name = os.path.basename(args.model_path)
+ 
++    llm_kwargs = {}
++    if args.max_model_len is not None:
++        llm_kwargs["max_model_len"] = args.max_model_len
+     llm = LLM(
+         model=args.model_path, tokenizer=args.model_path,
+-        gpu_memory_utilization=0.95,
++        dtype=args.dtype,
++        gpu_memory_utilization=args.gpu_memory_utilization,
+         tensor_parallel_size=torch.cuda.device_count(),
+         max_num_seqs=args.max_num_seqs,
++        **llm_kwargs,
+     )
+ 
+     sampling_params = SamplingParams(temperature=args.temperature, top_p=args.top_p,
++                                    top_k=args.top_k, min_p=args.min_p,
+                                     max_tokens=args.max_tokens, n=args.n, seed=args.seed)
+ 
+ 

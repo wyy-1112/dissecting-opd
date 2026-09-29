@@ -1,0 +1,1084 @@
+{
+  "content_sha256": "fea5b038c4b0d27393a53fe5e1b65d1ca0279f4d773d50644ab8adf553880020",
+  "domains": {
+    "all": {
+      "cosine": {
+        "dapo_m48": {
+          "dapo_m48": 0.9999999999999999,
+          "deepmath_m48": 0.9302263920274711,
+          "eurus_m48": 0.7720166563156436,
+          "gsm8k_m48": 0.691633638792035,
+          "science_m48": 0.8813751171768178,
+          "teacher_30b": 0.41306907915598695
+        },
+        "deepmath_m48": {
+          "dapo_m48": 0.9302263920274711,
+          "deepmath_m48": 0.9999999999999998,
+          "eurus_m48": 0.7539861017743642,
+          "gsm8k_m48": 0.6867484067902574,
+          "science_m48": 0.89151409124461,
+          "teacher_30b": 0.4191860818040556
+        },
+        "eurus_m48": {
+          "dapo_m48": 0.7720166563156436,
+          "deepmath_m48": 0.7539861017743642,
+          "eurus_m48": 1.0,
+          "gsm8k_m48": 0.6360088947799309,
+          "science_m48": 0.7513298587631413,
+          "teacher_30b": 0.3842334166891258
+        },
+        "gsm8k_m48": {
+          "dapo_m48": 0.691633638792035,
+          "deepmath_m48": 0.6867484067902574,
+          "eurus_m48": 0.6360088947799309,
+          "gsm8k_m48": 1.0,
+          "science_m48": 0.7012335273503377,
+          "teacher_30b": 0.2881765281220614
+        },
+        "science_m48": {
+          "dapo_m48": 0.8813751171768178,
+          "deepmath_m48": 0.89151409124461,
+          "eurus_m48": 0.7513298587631413,
+          "gsm8k_m48": 0.7012335273503377,
+          "science_m48": 0.9999999999999999,
+          "teacher_30b": 0.4126390192924152
+        },
+        "teacher_30b": {
+          "dapo_m48": 0.41306907915598695,
+          "deepmath_m48": 0.4191860818040556,
+          "eurus_m48": 0.3842334166891258,
+          "gsm8k_m48": 0.2881765281220614,
+          "science_m48": 0.4126390192924152,
+          "teacher_30b": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "dapo_m48": 179.2317086731681,
+        "deepmath_m48": 190.34307114259525,
+        "eurus_m48": 185.95845067378568,
+        "gsm8k_m48": 136.43305154742197,
+        "science_m48": 175.82277227569185,
+        "teacher_30b": 250.2496591659619
+      },
+      "positions": 73823,
+      "scalar_fit_against_reference": {
+        "dapo_m48": {
+          "cosine": 0.41306907915598695,
+          "norm_over_reference": 0.7162115995303084,
+          "residual_over_reference": 0.6522536857872645,
+          "residual_over_self": 0.9106996957533394,
+          "scale": 0.29584486589882103
+        },
+        "deepmath_m48": {
+          "cosine": 0.4191860818040556,
+          "norm_over_reference": 0.7606127088323524,
+          "residual_over_reference": 0.6905605375644505,
+          "residual_over_self": 0.9079003407983519,
+          "scale": 0.31883826118580283
+        },
+        "eurus_m48": {
+          "cosine": 0.3842334166891258,
+          "norm_over_reference": 0.7430917240548996,
+          "residual_over_reference": 0.6860490187972702,
+          "residual_over_self": 0.9232359836463268,
+          "scale": 0.2855206720470272
+        },
+        "gsm8k_m48": {
+          "cosine": 0.28817652812206135,
+          "norm_over_reference": 0.5451877617021711,
+          "residual_over_reference": 0.5220594257445694,
+          "residual_over_self": 0.9575773016522032,
+          "scale": 0.1571103163419694
+        },
+        "science_m48": {
+          "cosine": 0.4126390192924152,
+          "norm_over_reference": 0.7025894575108642,
+          "residual_over_reference": 0.6399849688755955,
+          "residual_over_self": 0.9108946370230718,
+          "scale": 0.289915824712473
+        },
+        "teacher_30b": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.6758023818379209,
+        "labels": [
+          "teacher_30b",
+          "deepmath_m48",
+          "dapo_m48",
+          "gsm8k_m48",
+          "eurus_m48",
+          "science_m48"
+        ],
+        "participation_ratio": 1.9830903887020161,
+        "second_over_first_singular": 0.5547825804092292,
+        "singular_values": [
+          381.2567115402973,
+          211.51458222666332,
+          102.8463352378147,
+          89.78642045787319,
+          63.40306126269625,
+          48.30668156492542
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m48": {
+            "dapo_m48": 1.0,
+            "deepmath_m48": 0.9156399266023892,
+            "eurus_m48": 0.7294344374246948,
+            "gsm8k_m48": 0.6565985231606258,
+            "science_m48": 0.8570013123863781
+          },
+          "deepmath_m48": {
+            "dapo_m48": 0.9156399266023892,
+            "deepmath_m48": 1.0,
+            "eurus_m48": 0.7073686115998827,
+            "gsm8k_m48": 0.6509762352727543,
+            "science_m48": 0.8688515231258147
+          },
+          "eurus_m48": {
+            "dapo_m48": 0.7294344374246948,
+            "deepmath_m48": 0.7073686115998827,
+            "eurus_m48": 1.0000000000000002,
+            "gsm8k_m48": 0.5941632998813857,
+            "science_m48": 0.7048761082208614
+          },
+          "gsm8k_m48": {
+            "dapo_m48": 0.6565985231606258,
+            "deepmath_m48": 0.6509762352727543,
+            "eurus_m48": 0.5941632998813857,
+            "gsm8k_m48": 0.9999999999999998,
+            "science_m48": 0.6676059536724938
+          },
+          "science_m48": {
+            "dapo_m48": 0.8570013123863781,
+            "deepmath_m48": 0.8688515231258147,
+            "eurus_m48": 0.7048761082208614,
+            "gsm8k_m48": 0.6676059536724938,
+            "science_m48": 1.0
+          }
+        },
+        "residual_norm": {
+          "dapo_m48": 163.22626255800535,
+          "deepmath_m48": 172.81253915896716,
+          "eurus_m48": 171.68353312515944,
+          "gsm8k_m48": 130.6451933569563,
+          "science_m48": 160.15602033245654
+        },
+        "residual_over_self": {
+          "dapo_m48": 0.9106996957533393,
+          "deepmath_m48": 0.9079003407983518,
+          "eurus_m48": 0.9232359836463266,
+          "gsm8k_m48": 0.9575773016522033,
+          "science_m48": 0.9108946370230718
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8057238546565068,
+          "labels": [
+            "deepmath_m48",
+            "dapo_m48",
+            "gsm8k_m48",
+            "eurus_m48",
+            "science_m48"
+          ],
+          "participation_ratio": 1.5124382686725177,
+          "second_over_first_singular": 0.3193797186993557,
+          "singular_values": [
+            322.0200825637235,
+            102.84668338474532,
+            89.84577651874169,
+            63.40456359058289,
+            48.30696970015458
+          ]
+        },
+        "teacher_label": "teacher_30b"
+      }
+    },
+    "gpqa": {
+      "cosine": {
+        "dapo_m48": {
+          "dapo_m48": 1.0,
+          "deepmath_m48": 0.9553301277732077,
+          "eurus_m48": 0.8813327339392978,
+          "gsm8k_m48": 0.7065421799494104,
+          "science_m48": 0.8885168050830454,
+          "teacher_30b": 0.38275395914438526
+        },
+        "deepmath_m48": {
+          "dapo_m48": 0.9553301277732077,
+          "deepmath_m48": 1.0000000000000002,
+          "eurus_m48": 0.8722198728077363,
+          "gsm8k_m48": 0.7139074140339338,
+          "science_m48": 0.9066003186311968,
+          "teacher_30b": 0.3648162565956861
+        },
+        "eurus_m48": {
+          "dapo_m48": 0.8813327339392978,
+          "deepmath_m48": 0.8722198728077363,
+          "eurus_m48": 1.0,
+          "gsm8k_m48": 0.7211246306763482,
+          "science_m48": 0.8325854848449379,
+          "teacher_30b": 0.37924676508862215
+        },
+        "gsm8k_m48": {
+          "dapo_m48": 0.7065421799494104,
+          "deepmath_m48": 0.7139074140339338,
+          "eurus_m48": 0.7211246306763482,
+          "gsm8k_m48": 1.0,
+          "science_m48": 0.6958929919774266,
+          "teacher_30b": 0.29701526816548385
+        },
+        "science_m48": {
+          "dapo_m48": 0.8885168050830454,
+          "deepmath_m48": 0.9066003186311968,
+          "eurus_m48": 0.8325854848449379,
+          "gsm8k_m48": 0.6958929919774266,
+          "science_m48": 0.9999999999999999,
+          "teacher_30b": 0.4052118346074745
+        },
+        "teacher_30b": {
+          "dapo_m48": 0.38275395914438526,
+          "deepmath_m48": 0.3648162565956861,
+          "eurus_m48": 0.37924676508862215,
+          "gsm8k_m48": 0.29701526816548385,
+          "science_m48": 0.4052118346074745,
+          "teacher_30b": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "dapo_m48": 101.80704964264004,
+        "deepmath_m48": 108.178159658112,
+        "eurus_m48": 100.47170189409321,
+        "gsm8k_m48": 68.75363711954783,
+        "science_m48": 107.35395884852778,
+        "teacher_30b": 142.6547270794799
+      },
+      "positions": 23483,
+      "scalar_fit_against_reference": {
+        "dapo_m48": {
+          "cosine": 0.38275395914438526,
+          "norm_over_reference": 0.7136605405716304,
+          "residual_over_reference": 0.6593155160729206,
+          "residual_over_self": 0.9238503162089075,
+          "scale": 0.2731563973889137
+        },
+        "deepmath_m48": {
+          "cosine": 0.36481625659568606,
+          "norm_over_reference": 0.7583215913892616,
+          "residual_over_reference": 0.7060577140508884,
+          "residual_over_self": 0.9310795341556545,
+          "scale": 0.27664804426631384
+        },
+        "eurus_m48": {
+          "cosine": 0.3792467650886221,
+          "norm_over_reference": 0.7042998430617411,
+          "residual_over_reference": 0.6516855244734349,
+          "residual_over_self": 0.9252955696261684,
+          "scale": 0.2671034371335895
+        },
+        "gsm8k_m48": {
+          "cosine": 0.29701526816548385,
+          "norm_over_reference": 0.4819583516586999,
+          "residual_over_reference": 0.4602088869893261,
+          "residual_over_self": 0.9548727299889687,
+          "scale": 0.1431489890625033
+        },
+        "science_m48": {
+          "cosine": 0.4052118346074745,
+          "norm_over_reference": 0.7525439993917317,
+          "residual_over_reference": 0.6879928991440251,
+          "residual_over_self": 0.914222822453063,
+          "scale": 0.30493973461636975
+        },
+        "teacher_30b": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.6963093856187685,
+        "labels": [
+          "teacher_30b",
+          "deepmath_m48",
+          "dapo_m48",
+          "gsm8k_m48",
+          "eurus_m48",
+          "science_m48"
+        ],
+        "participation_ratio": 1.8639359891005807,
+        "second_over_first_singular": 0.565814699669933,
+        "singular_values": [
+          218.81741128348125,
+          123.81010784791515,
+          46.368379871151035,
+          41.27416733895291,
+          35.09443510208159,
+          21.653025620896177
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m48": {
+            "dapo_m48": 1.0000000000000002,
+            "deepmath_m48": 0.9482864540444289,
+            "eurus_m48": 0.8611894384710829,
+            "gsm8k_m48": 0.6720535548453146,
+            "science_m48": 0.8683589763580629
+          },
+          "deepmath_m48": {
+            "dapo_m48": 0.9482864540444289,
+            "deepmath_m48": 1.0,
+            "eurus_m48": 0.8518215224759416,
+            "gsm8k_m48": 0.6811123462066733,
+            "science_m48": 0.8914001786797199
+          },
+          "eurus_m48": {
+            "dapo_m48": 0.8611894384710829,
+            "deepmath_m48": 0.8518215224759416,
+            "eurus_m48": 1.0,
+            "gsm8k_m48": 0.6886874287867749,
+            "science_m48": 0.8025642251706189
+          },
+          "gsm8k_m48": {
+            "dapo_m48": 0.6720535548453146,
+            "deepmath_m48": 0.6811123462066733,
+            "eurus_m48": 0.6886874287867749,
+            "gsm8k_m48": 1.0,
+            "science_m48": 0.6592909674113726
+          },
+          "science_m48": {
+            "dapo_m48": 0.8683589763580629,
+            "deepmath_m48": 0.8914001786797199,
+            "eurus_m48": 0.8025642251706189,
+            "gsm8k_m48": 0.6592909674113726,
+            "science_m48": 0.9999999999999998
+          }
+        },
+        "residual_norm": {
+          "dapo_m48": 94.05447500464894,
+          "deepmath_m48": 100.72247050029094,
+          "eurus_m48": 92.96602063540557,
+          "gsm8k_m48": 65.65097317301353,
+          "science_m48": 98.14543926001105
+        },
+        "residual_over_self": {
+          "dapo_m48": 0.9238503162089075,
+          "deepmath_m48": 0.9310795341556546,
+          "eurus_m48": 0.9252955696261684,
+          "gsm8k_m48": 0.9548727299889685,
+          "science_m48": 0.914222822453063
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8663786326405326,
+          "labels": [
+            "deepmath_m48",
+            "dapo_m48",
+            "gsm8k_m48",
+            "eurus_m48",
+            "science_m48"
+          ],
+          "participation_ratio": 1.3228006262100998,
+          "second_over_first_singular": 0.24431822187256907,
+          "singular_values": [
+            189.79201129672418,
+            46.3696467256342,
+            41.27499531523533,
+            35.111037941767044,
+            21.655413591804972
+          ]
+        },
+        "teacher_label": "teacher_30b"
+      }
+    },
+    "humaneval_plus": {
+      "cosine": {
+        "dapo_m48": {
+          "dapo_m48": 1.0,
+          "deepmath_m48": 0.961224308848833,
+          "eurus_m48": 0.762831125419622,
+          "gsm8k_m48": 0.7937873384554873,
+          "science_m48": 0.9096492277414204,
+          "teacher_30b": 0.31772779234498
+        },
+        "deepmath_m48": {
+          "dapo_m48": 0.961224308848833,
+          "deepmath_m48": 0.9999999999999998,
+          "eurus_m48": 0.7649702045281027,
+          "gsm8k_m48": 0.8189576522378346,
+          "science_m48": 0.9187694537138655,
+          "teacher_30b": 0.31004495398076193
+        },
+        "eurus_m48": {
+          "dapo_m48": 0.762831125419622,
+          "deepmath_m48": 0.7649702045281027,
+          "eurus_m48": 1.0000000000000002,
+          "gsm8k_m48": 0.6843004163698179,
+          "science_m48": 0.7444934505232768,
+          "teacher_30b": 0.4413611148600291
+        },
+        "gsm8k_m48": {
+          "dapo_m48": 0.7937873384554873,
+          "deepmath_m48": 0.8189576522378346,
+          "eurus_m48": 0.6843004163698179,
+          "gsm8k_m48": 1.0000000000000002,
+          "science_m48": 0.7903438696439712,
+          "teacher_30b": 0.2622085458318866
+        },
+        "science_m48": {
+          "dapo_m48": 0.9096492277414204,
+          "deepmath_m48": 0.9187694537138655,
+          "eurus_m48": 0.7444934505232768,
+          "gsm8k_m48": 0.7903438696439712,
+          "science_m48": 1.0,
+          "teacher_30b": 0.3475244239338258
+        },
+        "teacher_30b": {
+          "dapo_m48": 0.31772779234498,
+          "deepmath_m48": 0.31004495398076193,
+          "eurus_m48": 0.4413611148600291,
+          "gsm8k_m48": 0.2622085458318866,
+          "science_m48": 0.3475244239338258,
+          "teacher_30b": 0.9999999999999999
+        }
+      },
+      "norms": {
+        "dapo_m48": 68.46376768377138,
+        "deepmath_m48": 73.73747888836083,
+        "eurus_m48": 86.01028401553734,
+        "gsm8k_m48": 67.10376598544457,
+        "science_m48": 66.73891260278181,
+        "teacher_30b": 79.12613570673201
+      },
+      "positions": 10667,
+      "scalar_fit_against_reference": {
+        "dapo_m48": {
+          "cosine": 0.31772779234498005,
+          "norm_over_reference": 0.8652484678074139,
+          "residual_over_reference": 0.8204129975383377,
+          "residual_over_self": 0.9481819709167567,
+          "scale": 0.2749134855063262
+        },
+        "deepmath_m48": {
+          "cosine": 0.310044953980762,
+          "norm_over_reference": 0.9318978897397017,
+          "residual_over_reference": 0.8859757300708702,
+          "residual_over_self": 0.9507218975657746,
+          "scale": 0.288930238339115
+        },
+        "eurus_m48": {
+          "cosine": 0.4413611148600291,
+          "norm_over_reference": 1.08700220536891,
+          "residual_over_reference": 0.9753992270403271,
+          "residual_over_self": 0.8973295750667712,
+          "scale": 0.47976050521693236
+        },
+        "gsm8k_m48": {
+          "cosine": 0.2622085458318866,
+          "norm_over_reference": 0.8480606993642863,
+          "residual_over_reference": 0.818388100570841,
+          "residual_over_self": 0.9650112323142811,
+          "scale": 0.22236876275748227
+        },
+        "science_m48": {
+          "cosine": 0.3475244239338258,
+          "norm_over_reference": 0.8434496643452752,
+          "residual_over_reference": 0.7908782319854645,
+          "residual_over_self": 0.9376709309611034,
+          "scale": 0.29311935871877054
+        },
+        "teacher_30b": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.7192334983652714,
+        "labels": [
+          "teacher_30b",
+          "deepmath_m48",
+          "dapo_m48",
+          "gsm8k_m48",
+          "eurus_m48",
+          "science_m48"
+        ],
+        "participation_ratio": 1.820249114508504,
+        "second_over_first_singular": 0.4771686925020262,
+        "singular_values": [
+          153.45311888766827,
+          73.22302409998665,
+          44.70261044837422,
+          34.38060700797038,
+          21.46754599717159,
+          13.767332582499641
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m48": {
+            "dapo_m48": 1.0,
+            "deepmath_m48": 0.9570218690966377,
+            "eurus_m48": 0.7317527243504985,
+            "gsm8k_m48": 0.7764716299329562,
+            "science_m48": 0.8989389687343647
+          },
+          "deepmath_m48": {
+            "dapo_m48": 0.9570218690966377,
+            "deepmath_m48": 1.0000000000000002,
+            "eurus_m48": 0.7362799319477817,
+            "gsm8k_m48": 0.8040278361787728,
+            "science_m48": 0.9097630401118428
+          },
+          "eurus_m48": {
+            "dapo_m48": 0.7317527243504985,
+            "deepmath_m48": 0.7362799319477817,
+            "eurus_m48": 1.0,
+            "gsm8k_m48": 0.6566000858061032,
+            "science_m48": 0.702531237309075
+          },
+          "gsm8k_m48": {
+            "dapo_m48": 0.7764716299329562,
+            "deepmath_m48": 0.8040278361787728,
+            "eurus_m48": 0.6566000858061032,
+            "gsm8k_m48": 1.0,
+            "science_m48": 0.7727357741452938
+          },
+          "science_m48": {
+            "dapo_m48": 0.8989389687343647,
+            "deepmath_m48": 0.9097630401118428,
+            "eurus_m48": 0.702531237309075,
+            "gsm8k_m48": 0.7727357741452938,
+            "science_m48": 1.0
+          }
+        },
+        "residual_norm": {
+          "dapo_m48": 64.9161101787853,
+          "deepmath_m48": 70.10383585045864,
+          "eurus_m48": 77.17957160703443,
+          "gsm8k_m48": 64.75588790654301,
+          "science_m48": 62.57913831158214
+        },
+        "residual_over_self": {
+          "dapo_m48": 0.9481819709167567,
+          "deepmath_m48": 0.9507218975657744,
+          "eurus_m48": 0.8973295750667714,
+          "gsm8k_m48": 0.9650112323142812,
+          "science_m48": 0.9376709309611035
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8310147164108473,
+          "labels": [
+            "deepmath_m48",
+            "dapo_m48",
+            "gsm8k_m48",
+            "eurus_m48",
+            "science_m48"
+          ],
+          "participation_ratio": 1.4250428271903743,
+          "second_over_first_singular": 0.32892580840229907,
+          "singular_values": [
+            138.8352535486864,
+            45.666498008239834,
+            34.39494537198611,
+            21.48465275495548,
+            13.767707365968896
+          ]
+        },
+        "teacher_label": "teacher_30b"
+      }
+    },
+    "livecodebench_v6": {
+      "cosine": {
+        "dapo_m48": {
+          "dapo_m48": 1.0000000000000002,
+          "deepmath_m48": 0.9630845788206049,
+          "eurus_m48": 0.7066016770410867,
+          "gsm8k_m48": 0.8240877058152093,
+          "science_m48": 0.9309477193818533,
+          "teacher_30b": 0.25339409064264945
+        },
+        "deepmath_m48": {
+          "dapo_m48": 0.9630845788206049,
+          "deepmath_m48": 1.0000000000000002,
+          "eurus_m48": 0.7005505686607184,
+          "gsm8k_m48": 0.8456132317112712,
+          "science_m48": 0.9466743838984275,
+          "teacher_30b": 0.23408148990238983
+        },
+        "eurus_m48": {
+          "dapo_m48": 0.7066016770410867,
+          "deepmath_m48": 0.7005505686607184,
+          "eurus_m48": 0.9999999999999999,
+          "gsm8k_m48": 0.5846993254338306,
+          "science_m48": 0.693431575341388,
+          "teacher_30b": 0.44268256549769847
+        },
+        "gsm8k_m48": {
+          "dapo_m48": 0.8240877058152093,
+          "deepmath_m48": 0.8456132317112712,
+          "eurus_m48": 0.5846993254338306,
+          "gsm8k_m48": 1.0,
+          "science_m48": 0.8772676411299193,
+          "teacher_30b": 0.23425157902293395
+        },
+        "science_m48": {
+          "dapo_m48": 0.9309477193818533,
+          "deepmath_m48": 0.9466743838984275,
+          "eurus_m48": 0.693431575341388,
+          "gsm8k_m48": 0.8772676411299193,
+          "science_m48": 1.0,
+          "teacher_30b": 0.25392713540087464
+        },
+        "teacher_30b": {
+          "dapo_m48": 0.25339409064264945,
+          "deepmath_m48": 0.23408148990238983,
+          "eurus_m48": 0.44268256549769847,
+          "gsm8k_m48": 0.23425157902293395,
+          "science_m48": 0.25392713540087464,
+          "teacher_30b": 0.9999999999999999
+        }
+      },
+      "norms": {
+        "dapo_m48": 61.28677340617721,
+        "deepmath_m48": 61.59067904051824,
+        "eurus_m48": 78.57093544628715,
+        "gsm8k_m48": 45.68994143428903,
+        "science_m48": 57.57835560112993,
+        "teacher_30b": 79.41216099818293
+      },
+      "positions": 11138,
+      "scalar_fit_against_reference": {
+        "dapo_m48": {
+          "cosine": 0.25339409064264945,
+          "norm_over_reference": 0.7717555174903193,
+          "residual_over_reference": 0.7465678368012684,
+          "residual_over_self": 0.9673631349329913,
+          "scale": 0.1955582875529068
+        },
+        "deepmath_m48": {
+          "cosine": 0.23408148990238983,
+          "norm_over_reference": 0.7755824582324051,
+          "residual_over_reference": 0.7540344352377177,
+          "residual_over_self": 0.9722169799407319,
+          "scale": 0.18154949736519943
+        },
+        "eurus_m48": {
+          "cosine": 0.4426825654976986,
+          "norm_over_reference": 0.989406842210036,
+          "residual_over_reference": 0.8871797404581033,
+          "residual_over_self": 0.8966783961958579,
+          "scale": 0.4379931592305154
+        },
+        "gsm8k_m48": {
+          "cosine": 0.23425157902293395,
+          "norm_over_reference": 0.5753519468552744,
+          "residual_over_reference": 0.5593433610176927,
+          "residual_over_self": 0.9721760117001768,
+          "scale": 0.1347771020447672
+        },
+        "science_m48": {
+          "cosine": 0.25392713540087464,
+          "norm_over_reference": 0.7250571559492937,
+          "residual_over_reference": 0.7012922117392455,
+          "residual_over_self": 0.9672233505799505,
+          "scale": 0.18411168661210936
+        },
+        "teacher_30b": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.6679393305217757,
+        "labels": [
+          "teacher_30b",
+          "deepmath_m48",
+          "dapo_m48",
+          "gsm8k_m48",
+          "eurus_m48",
+          "science_m48"
+        ],
+        "participation_ratio": 1.9925080275157927,
+        "second_over_first_singular": 0.5761589227142997,
+        "singular_values": [
+          130.33431606399904,
+          75.09327913613873,
+          44.60087667416693,
+          22.08485733753024,
+          14.162042924146354,
+          11.332441648647759
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m48": {
+            "dapo_m48": 0.9999999999999999,
+            "deepmath_m48": 0.9609594196953029,
+            "eurus_m48": 0.6852884416528345,
+            "gsm8k_m48": 0.813155392463067,
+            "science_m48": 0.9261992515517362
+          },
+          "deepmath_m48": {
+            "dapo_m48": 0.9609594196953029,
+            "deepmath_m48": 1.0,
+            "eurus_m48": 0.6847328296477603,
+            "gsm8k_m48": 0.8366564722740044,
+            "science_m48": 0.9435144694922396
+          },
+          "eurus_m48": {
+            "dapo_m48": 0.6852884416528345,
+            "deepmath_m48": 0.6847328296477603,
+            "eurus_m48": 1.0,
+            "gsm8k_m48": 0.5517771121660656,
+            "science_m48": 0.6699300234321478
+          },
+          "gsm8k_m48": {
+            "dapo_m48": 0.813155392463067,
+            "deepmath_m48": 0.8366564722740044,
+            "eurus_m48": 0.5517771121660656,
+            "gsm8k_m48": 1.0,
+            "science_m48": 0.8696957852661047
+          },
+          "science_m48": {
+            "dapo_m48": 0.9261992515517362,
+            "deepmath_m48": 0.9435144694922396,
+            "eurus_m48": 0.6699300234321478,
+            "gsm8k_m48": 0.8696957852661047,
+            "science_m48": 1.0000000000000002
+          }
+        },
+        "residual_norm": {
+          "dapo_m48": 59.286565252127474,
+          "deepmath_m48": 59.879503969271575,
+          "eurus_m48": 70.45286038358503,
+          "gsm8k_m48": 44.41866503840176,
+          "science_m48": 55.69113002540875
+        },
+        "residual_over_self": {
+          "dapo_m48": 0.9673631349329914,
+          "deepmath_m48": 0.9722169799407319,
+          "eurus_m48": 0.8966783961958578,
+          "gsm8k_m48": 0.9721760117001766,
+          "science_m48": 0.9672233505799505
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8282829042960966,
+          "labels": [
+            "deepmath_m48",
+            "dapo_m48",
+            "gsm8k_m48",
+            "eurus_m48",
+            "science_m48"
+          ],
+          "participation_ratio": 1.4236081136632712,
+          "second_over_first_singular": 0.3869646331194638,
+          "singular_values": [
+            119.14524930201374,
+            46.10499768408079,
+            22.097573016294,
+            14.162130826356279,
+            11.333454596417118
+          ]
+        },
+        "teacher_label": "teacher_30b"
+      }
+    },
+    "math": {
+      "cosine": {
+        "dapo_m48": {
+          "dapo_m48": 1.0,
+          "deepmath_m48": 0.8916473095273686,
+          "eurus_m48": 0.7317323910521398,
+          "gsm8k_m48": 0.609996233982253,
+          "science_m48": 0.8539687609767127,
+          "teacher_30b": 0.5034862313011133
+        },
+        "deepmath_m48": {
+          "dapo_m48": 0.8916473095273686,
+          "deepmath_m48": 1.0,
+          "eurus_m48": 0.6938990627228042,
+          "gsm8k_m48": 0.5766831202647367,
+          "science_m48": 0.857230121612031,
+          "teacher_30b": 0.5339911719630636
+        },
+        "eurus_m48": {
+          "dapo_m48": 0.7317323910521398,
+          "deepmath_m48": 0.6938990627228042,
+          "eurus_m48": 0.9999999999999998,
+          "gsm8k_m48": 0.5721813676420733,
+          "science_m48": 0.7258588500678689,
+          "teacher_30b": 0.3709226689462629
+        },
+        "gsm8k_m48": {
+          "dapo_m48": 0.609996233982253,
+          "deepmath_m48": 0.5766831202647367,
+          "eurus_m48": 0.5721813676420733,
+          "gsm8k_m48": 1.0000000000000002,
+          "science_m48": 0.6339825921699227,
+          "teacher_30b": 0.3181283298447906
+        },
+        "science_m48": {
+          "dapo_m48": 0.8539687609767127,
+          "deepmath_m48": 0.857230121612031,
+          "eurus_m48": 0.7258588500678689,
+          "gsm8k_m48": 0.6339825921699227,
+          "science_m48": 1.0,
+          "teacher_30b": 0.4819427316354172
+        },
+        "teacher_30b": {
+          "dapo_m48": 0.5034862313011133,
+          "deepmath_m48": 0.5339911719630636,
+          "eurus_m48": 0.3709226689462629,
+          "gsm8k_m48": 0.3181283298447906,
+          "science_m48": 0.4819427316354172,
+          "teacher_30b": 1.0
+        }
+      },
+      "norms": {
+        "dapo_m48": 115.39486105094537,
+        "deepmath_m48": 123.6824278848691,
+        "eurus_m48": 104.47402376744805,
+        "gsm8k_m48": 85.41913591038612,
+        "science_m48": 107.79343802442895,
+        "teacher_30b": 172.3580113840873
+      },
+      "positions": 28535,
+      "scalar_fit_against_reference": {
+        "dapo_m48": {
+          "cosine": 0.5034862313011133,
+          "norm_over_reference": 0.6695068022907059,
+          "residual_over_reference": 0.5784560526421997,
+          "residual_over_self": 0.8640032493516456,
+          "scale": 0.33708745671580703
+        },
+        "deepmath_m48": {
+          "cosine": 0.5339911719630636,
+          "norm_over_reference": 0.717590246555188,
+          "residual_over_reference": 0.6067154149741737,
+          "residual_over_self": 0.8454900521387072,
+          "scale": 0.3831868567472686
+        },
+        "eurus_m48": {
+          "cosine": 0.3709226689462629,
+          "norm_over_reference": 0.606145446495291,
+          "residual_over_reference": 0.5629053076622283,
+          "residual_over_self": 0.9286637570519165,
+          "scale": 0.22483308678365754
+        },
+        "gsm8k_m48": {
+          "cosine": 0.3181283298447906,
+          "norm_over_reference": 0.4955913289115166,
+          "residual_over_reference": 0.4698441997218758,
+          "residual_over_self": 0.9480476600625963,
+          "scale": 0.15766164175218106
+        },
+        "science_m48": {
+          "cosine": 0.4819427316354172,
+          "norm_over_reference": 0.6254042800727093,
+          "residual_over_reference": 0.5479809301888694,
+          "residual_over_self": 0.8762027182243801,
+          "scale": 0.301409047114723
+        },
+        "teacher_30b": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.675392128869755,
+        "labels": [
+          "teacher_30b",
+          "deepmath_m48",
+          "dapo_m48",
+          "gsm8k_m48",
+          "eurus_m48",
+          "science_m48"
+        ],
+        "participation_ratio": 2.001657160036053,
+        "second_over_first_singular": 0.5393076726273968,
+        "singular_values": [
+          244.00139024933176,
+          131.5918218932163,
+          65.65013169098434,
+          60.61546917858286,
+          42.88240687328398,
+          38.40722547767437
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "dapo_m48": {
+            "dapo_m48": 1.0,
+            "deepmath_m48": 0.8525460118449002,
+            "eurus_m48": 0.6792115242341853,
+            "gsm8k_m48": 0.5491564784206939,
+            "science_m48": 0.8075076876132431
+          },
+          "deepmath_m48": {
+            "dapo_m48": 0.8525460118449002,
+            "deepmath_m48": 1.0,
+            "eurus_m48": 0.6314885477893359,
+            "gsm8k_m48": 0.5075140117376318,
+            "science_m48": 0.8097465043440708
+          },
+          "eurus_m48": {
+            "dapo_m48": 0.6792115242341853,
+            "deepmath_m48": 0.6314885477893359,
+            "eurus_m48": 1.0,
+            "gsm8k_m48": 0.5158692978162484,
+            "science_m48": 0.6723570193532382
+          },
+          "gsm8k_m48": {
+            "dapo_m48": 0.5491564784206939,
+            "deepmath_m48": 0.5075140117376318,
+            "eurus_m48": 0.5158692978162484,
+            "gsm8k_m48": 1.0000000000000002,
+            "science_m48": 0.5786365811115152
+          },
+          "science_m48": {
+            "dapo_m48": 0.8075076876132431,
+            "deepmath_m48": 0.8097465043440708,
+            "eurus_m48": 0.6723570193532382,
+            "gsm8k_m48": 0.5786365811115152,
+            "science_m48": 0.9999999999999998
+          }
+        },
+        "residual_norm": {
+          "dapo_m48": 99.70153490649845,
+          "deepmath_m48": 104.57226240101987,
+          "eurus_m48": 97.02123942620952,
+          "gsm8k_m48": 80.98141192441045,
+          "science_m48": 94.44890340375589
+        },
+        "residual_over_self": {
+          "dapo_m48": 0.8640032493516456,
+          "deepmath_m48": 0.8454900521387072,
+          "eurus_m48": 0.9286637570519165,
+          "gsm8k_m48": 0.9480476600625963,
+          "science_m48": 0.87620271822438
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7524330313677208,
+          "labels": [
+            "deepmath_m48",
+            "dapo_m48",
+            "gsm8k_m48",
+            "eurus_m48",
+            "science_m48"
+          ],
+          "participation_ratio": 1.711587145378763,
+          "second_over_first_singular": 0.3550220182909041,
+          "singular_values": [
+            185.57194900549112,
+            65.88212787410619,
+            60.62624337940595,
+            42.88452646520922,
+            38.4113580892364
+          ]
+        },
+        "teacher_label": "teacher_30b"
+      }
+    }
+  },
+  "inputs": {
+    "anchor_base_score": {
+      "checkpoint": {
+        "fingerprint": "97fb23f1860189c17bb5f709a28b6204abef6052c589b9641abcc1b74d11d856",
+        "path": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b"
+      },
+      "label": "base_fp32",
+      "log_probability_shift_rms": 0.17141302653790275,
+      "path": "results/analysis/qwen3_4b_functional_geometry_v3/scores/base_fp32.npz",
+      "sha256": "d6ed3bec8740edefcb42e2b3ca89f9e67e3550de921a9c744449301dc4f39d5a"
+    },
+    "reference": {
+      "cohort": {
+        "manifest_path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/manifest.json",
+        "manifest_sha256": "92d69cddae15b8bbeb61b6ef6648791e590d4b91dd5c0279d6319db7b39fa88c",
+        "path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/cohort.jsonl",
+        "sha256": "dea3595a71944288594453b0b57826ad8b3be4c7feda102b3c7a7ba325ab908e"
+      },
+      "path": "results/analysis/qwen3_4b_functional_geometry_v2/function_space/fisher_k128/base_topk.npz",
+      "sha256": "b19cee442036991691c747d75b1c465416f66e430bcdc2ace8f8840421ed9504",
+      "top_k": 128
+    },
+    "reference_label": "teacher_30b",
+    "scores": {
+      "dapo_m48": {
+        "checkpoint": {
+          "fingerprint": "ec6966d1a969d3f33f562b192692a99fac3270ef3372f804ba505fe40fec12db",
+          "path": "/path/to/opd-code/results/opd/qwen3_30b_to_4b_dapo_diversity_b256_s15_v1/seed_42/support_48/merged_hf/step_15"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/dapo_m48.npz",
+        "sha256": "3892b44c4fc0d0c9931ae28ed985eb89f453b94c680333f19ee9d52bc9b570ed"
+      },
+      "deepmath_m48": {
+        "checkpoint": {
+          "fingerprint": "34d16853619e75d8f3dc2a7bdca9979f888ef83b88abddbe1c01e3ebac1229f9",
+          "path": "/path/to/opd-code/results/opd/qwen3_30b_to_4b_diversity_b256_s15_v1/seed_42/support_48/merged_hf/step_15"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/deepmath_m48.npz",
+        "sha256": "01e106fb285190ffc14afc4278f06dbd05bd2f583b8c6ad29a82c343829124eb"
+      },
+      "eurus_m48": {
+        "checkpoint": {
+          "fingerprint": "0873140b898ed782eed58ed8edab28e351e837f753fce3202f0276dfc0221e4d",
+          "path": "/path/to/opd-code/results/opd/qwen3_30b_to_4b_eurus_diversity_b256_s15_v1/seed_42/support_48/merged_hf/step_15"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/eurus_m48.npz",
+        "sha256": "ca7f5c3680b859522ea2c1e318e0c2cf74e9390054d73a8076bec24f010b19cc"
+      },
+      "gsm8k_m48": {
+        "checkpoint": {
+          "fingerprint": "1f6a101625fa91ca09da793c51ff7b660aa1b1c4dea737d3c05e203b2d127497",
+          "path": "/path/to/opd-code/results/opd/qwen3_30b_to_4b_gsm8k_diversity_b256_s15_v1/seed_42/support_48/merged_hf/step_15"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/gsm8k_m48.npz",
+        "sha256": "5e5b224552e1386b43af245729ac35efcc28cef5c879fe8e4eef8a8c677ee86e"
+      },
+      "science_m48": {
+        "checkpoint": {
+          "fingerprint": "2f67ed67e047b6efb137f985c6338095ced44675746467b60b8050e8def0ddb2",
+          "path": "/path/to/opd-code/results/opd/qwen3_30b_to_4b_science_diversity_b256_s15_v1/seed_42/support_48/merged_hf/step_15"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/science_m48.npz",
+        "sha256": "74d1e918bf6fc6a20da42735aeb8923c0e4468ce50dc2acf2e11c7e7a5726a29"
+      },
+      "teacher_30b": {
+        "checkpoint": {
+          "fingerprint": "8e68c71acde6aaac2fffe645035ee0789d4d945eb98cd7a65f4034f721aaa38c",
+          "path": "/path/to/opd-code/data/models/opd_qwen3_30b_teacher/teacher_qwen3_30b_a3b_instruct_2507"
+        },
+        "path": "results/analysis/qwen3_30b_to_4b_pool_geometry_v1/scores/teacher_30b.npz",
+        "sha256": "512efbdb93f17551309ae768b3c95e8ed5d84d3bcdb29fa8aa3d032c8a97db8a"
+      }
+    },
+    "subspace_labels": [
+      "teacher_30b",
+      "deepmath_m48",
+      "dapo_m48",
+      "gsm8k_m48",
+      "eurus_m48",
+      "science_m48"
+    ]
+  },
+  "representation": "centered top-K Fisher vector, identical to fisher_centered_vector; all quantities are exact functions of the Gram matrix of the full flattened vectors, not of any per-probe scalar reduction",
+  "schema_version": "opd_endpoint_collinearity_v1"
+}

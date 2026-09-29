@@ -1,0 +1,885 @@
+{
+  "content_sha256": "4c7e6c72044b1035ecc3095853142cd17b6fed99bdb6f3852fb6cb7eb9a10d70",
+  "domains": {
+    "all": {
+      "cosine": {
+        "aprime_s100": {
+          "aprime_s100": 1.0,
+          "full_s100": 0.4447203058772834,
+          "m48_s100": 0.4741509341416421,
+          "recovery_m48_s100": 0.5470613488251869,
+          "teacher_code": 0.3712879357040381
+        },
+        "full_s100": {
+          "aprime_s100": 0.4447203058772834,
+          "full_s100": 0.9999999999999999,
+          "m48_s100": 0.9739125722863656,
+          "recovery_m48_s100": 0.935563216690202,
+          "teacher_code": 0.9327194973150815
+        },
+        "m48_s100": {
+          "aprime_s100": 0.4741509341416421,
+          "full_s100": 0.9739125722863656,
+          "m48_s100": 1.0,
+          "recovery_m48_s100": 0.9573715147430902,
+          "teacher_code": 0.9144314544417855
+        },
+        "recovery_m48_s100": {
+          "aprime_s100": 0.5470613488251869,
+          "full_s100": 0.935563216690202,
+          "m48_s100": 0.9573715147430902,
+          "recovery_m48_s100": 1.0,
+          "teacher_code": 0.8661063225439761
+        },
+        "teacher_code": {
+          "aprime_s100": 0.3712879357040381,
+          "full_s100": 0.9327194973150815,
+          "m48_s100": 0.9144314544417855,
+          "recovery_m48_s100": 0.8661063225439761,
+          "teacher_code": 1.0
+        }
+      },
+      "norms": {
+        "aprime_s100": 167.35248835743266,
+        "full_s100": 166.92934553144735,
+        "m48_s100": 166.54085349841205,
+        "recovery_m48_s100": 167.8946387605114,
+        "teacher_code": 132.0223176265312
+      },
+      "positions": 73823,
+      "scalar_fit_against_reference": {
+        "aprime_s100": {
+          "cosine": 0.3712879357040382,
+          "norm_over_reference": 1.2676075633730697,
+          "residual_over_reference": 1.1769961613536966,
+          "residual_over_self": 0.9285177805516888,
+          "scale": 0.47064739548761275
+        },
+        "full_s100": {
+          "cosine": 0.9327194973150816,
+          "norm_over_reference": 1.2644024777966876,
+          "residual_over_reference": 0.4559470036239418,
+          "residual_over_self": 0.3606027444824865,
+          "scale": 1.17933284349447
+        },
+        "m48_s100": {
+          "cosine": 0.9144314544417855,
+          "norm_over_reference": 1.261459853852346,
+          "residual_over_reference": 0.5105642703270075,
+          "residual_over_self": 0.40474079992938805,
+          "scale": 1.1535185688781229
+        },
+        "recovery_m48_s100": {
+          "cosine": 0.8661063225439761,
+          "norm_over_reference": 1.2717140690974458,
+          "residual_over_reference": 0.635678763633827,
+          "residual_over_self": 0.49985981839846877,
+          "scale": 1.1014395957134246
+        },
+        "teacher_code": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.8092783653658416,
+        "labels": [
+          "teacher_code",
+          "aprime_s100",
+          "m48_s100",
+          "full_s100",
+          "recovery_m48_s100"
+        ],
+        "participation_ratio": 1.4701961357143898,
+        "second_over_first_singular": 0.44094493785151007,
+        "singular_values": [
+          323.3887870163669,
+          142.59664859280713,
+          50.453476167847676,
+          34.10455644742585,
+          24.573032642553517
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "aprime_s100": {
+            "aprime_s100": 1.0,
+            "full_s100": 0.29392219093622696,
+            "m48_s100": 0.35824995303625956,
+            "recovery_m48_s100": 0.48582754321768584
+          },
+          "full_s100": {
+            "aprime_s100": 0.29392219093622696,
+            "full_s100": 1.0,
+            "m48_s100": 0.8290783998529295,
+            "recovery_m48_s100": 0.7086179204368342
+          },
+          "m48_s100": {
+            "aprime_s100": 0.35824995303625956,
+            "full_s100": 0.8290783998529295,
+            "m48_s100": 1.0,
+            "recovery_m48_s100": 0.8174270005747896
+          },
+          "recovery_m48_s100": {
+            "aprime_s100": 0.48582754321768584,
+            "full_s100": 0.7086179204368342,
+            "m48_s100": 0.8174270005747896,
+            "recovery_m48_s100": 1.0
+          }
+        },
+        "residual_norm": {
+          "aprime_s100": 155.3897610594457,
+          "full_s100": 60.19518013330524,
+          "m48_s100": 67.40587826587029,
+          "recovery_m48_s100": 83.92378364090575
+        },
+        "residual_over_self": {
+          "aprime_s100": 0.9285177805516888,
+          "full_s100": 0.3606027444824867,
+          "m48_s100": 0.4047407999293879,
+          "recovery_m48_s100": 0.49985981839846877
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7162415149749597,
+          "labels": [
+            "aprime_s100",
+            "m48_s100",
+            "full_s100",
+            "recovery_m48_s100"
+          ],
+          "participation_ratio": 1.7581378681072353,
+          "second_over_first_singular": 0.5703783184340722,
+          "singular_values": [
+            167.89442569592543,
+            95.76334020289622,
+            37.282769132906026,
+            24.63800028398714
+          ]
+        },
+        "teacher_label": "teacher_code"
+      }
+    },
+    "gpqa": {
+      "cosine": {
+        "aprime_s100": {
+          "aprime_s100": 1.0,
+          "full_s100": 0.33870707468524947,
+          "m48_s100": 0.3760398221185134,
+          "recovery_m48_s100": 0.4533437076286569,
+          "teacher_code": 0.25119762772659826
+        },
+        "full_s100": {
+          "aprime_s100": 0.33870707468524947,
+          "full_s100": 1.0000000000000002,
+          "m48_s100": 0.9653035278030033,
+          "recovery_m48_s100": 0.9469323676813047,
+          "teacher_code": 0.9007991744837183
+        },
+        "m48_s100": {
+          "aprime_s100": 0.3760398221185134,
+          "full_s100": 0.9653035278030033,
+          "m48_s100": 1.0000000000000002,
+          "recovery_m48_s100": 0.962871821643266,
+          "teacher_code": 0.9001130934132981
+        },
+        "recovery_m48_s100": {
+          "aprime_s100": 0.4533437076286569,
+          "full_s100": 0.9469323676813047,
+          "m48_s100": 0.962871821643266,
+          "recovery_m48_s100": 1.0,
+          "teacher_code": 0.8754871979478595
+        },
+        "teacher_code": {
+          "aprime_s100": 0.25119762772659826,
+          "full_s100": 0.9007991744837183,
+          "m48_s100": 0.9001130934132981,
+          "recovery_m48_s100": 0.8754871979478595,
+          "teacher_code": 1.0
+        }
+      },
+      "norms": {
+        "aprime_s100": 75.49088166517352,
+        "full_s100": 73.07956567347263,
+        "m48_s100": 73.73378519404564,
+        "recovery_m48_s100": 78.00725892380852,
+        "teacher_code": 46.93910411446598
+      },
+      "positions": 23483,
+      "scalar_fit_against_reference": {
+        "aprime_s100": {
+          "cosine": 0.25119762772659826,
+          "norm_over_reference": 1.6082727416586609,
+          "residual_over_reference": 1.556704795135097,
+          "residual_over_self": 0.9679358200958003,
+          "scale": 0.4039942974420078
+        },
+        "full_s100": {
+          "cosine": 0.9007991744837182,
+          "norm_over_reference": 1.5569015866868778,
+          "residual_over_reference": 0.6760626162053593,
+          "residual_over_self": 0.4342359350047526,
+          "scale": 1.4024556640399306
+        },
+        "m48_s100": {
+          "cosine": 0.9001130934132981,
+          "norm_over_reference": 1.5708392093346732,
+          "residual_over_reference": 0.6843460110597765,
+          "residual_over_self": 0.4356563084197716,
+          "scale": 1.4139329399691323
+        },
+        "recovery_m48_s100": {
+          "cosine": 0.8754871979478595,
+          "norm_over_reference": 1.661882142734969,
+          "residual_over_reference": 0.8030901080865139,
+          "residual_over_self": 0.4832413126269374,
+          "scale": 1.4549565404626228
+        },
+        "teacher_code": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.781918885574888,
+        "labels": [
+          "teacher_code",
+          "aprime_s100",
+          "m48_s100",
+          "full_s100",
+          "recovery_m48_s100"
+        ],
+        "participation_ratio": 1.5455004684473823,
+        "second_over_first_singular": 0.4902410142342123,
+        "singular_values": [
+          139.15420271293826,
+          68.21909747294403,
+          18.31147940333868,
+          15.748881216928735,
+          12.786876956657467
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "aprime_s100": {
+            "aprime_s100": 1.0,
+            "full_s100": 0.2674877733911417,
+            "m48_s100": 0.3555561951980579,
+            "recovery_m48_s100": 0.4990381806205193
+          },
+          "full_s100": {
+            "aprime_s100": 0.2674877733911417,
+            "full_s100": 1.0,
+            "m48_s100": 0.8165997262198466,
+            "recovery_m48_s100": 0.7543540880987702
+          },
+          "m48_s100": {
+            "aprime_s100": 0.3555561951980579,
+            "full_s100": 0.8165997262198466,
+            "m48_s100": 1.0,
+            "recovery_m48_s100": 0.8304598780135032
+          },
+          "recovery_m48_s100": {
+            "aprime_s100": 0.4990381806205193,
+            "full_s100": 0.7543540880987702,
+            "m48_s100": 0.8304598780135032,
+            "recovery_m48_s100": 1.0
+          }
+        },
+        "residual_norm": {
+          "aprime_s100": 73.07032845433474,
+          "full_s100": 31.733773529961613,
+          "m48_s100": 32.12258866345435,
+          "recovery_m48_s100": 37.69633019677061
+        },
+        "residual_over_self": {
+          "aprime_s100": 0.9679358200958003,
+          "full_s100": 0.43423593500475266,
+          "m48_s100": 0.4356563084197718,
+          "recovery_m48_s100": 0.4832413126269375
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7087280931767082,
+          "labels": [
+            "aprime_s100",
+            "m48_s100",
+            "full_s100",
+            "recovery_m48_s100"
+          ],
+          "participation_ratio": 1.7764532865888263,
+          "second_over_first_singular": 0.5865295670207592,
+          "singular_values": [
+            78.96977626728614,
+            46.31810868177756,
+            15.930534930916531,
+            12.798616990650288
+          ]
+        },
+        "teacher_label": "teacher_code"
+      }
+    },
+    "humaneval_plus": {
+      "cosine": {
+        "aprime_s100": {
+          "aprime_s100": 1.0000000000000002,
+          "full_s100": 0.5944460624414972,
+          "m48_s100": 0.5998512295135924,
+          "recovery_m48_s100": 0.6723660659141899,
+          "teacher_code": 0.5684968301144725
+        },
+        "full_s100": {
+          "aprime_s100": 0.5944460624414972,
+          "full_s100": 0.9999999999999998,
+          "m48_s100": 0.978248493827518,
+          "recovery_m48_s100": 0.9234498234803235,
+          "teacher_code": 0.9704650730072851
+        },
+        "m48_s100": {
+          "aprime_s100": 0.5998512295135924,
+          "full_s100": 0.978248493827518,
+          "m48_s100": 1.0,
+          "recovery_m48_s100": 0.9470841504351957,
+          "teacher_code": 0.963663386524616
+        },
+        "recovery_m48_s100": {
+          "aprime_s100": 0.6723660659141899,
+          "full_s100": 0.9234498234803235,
+          "m48_s100": 0.9470841504351957,
+          "recovery_m48_s100": 1.0,
+          "teacher_code": 0.9108580816289508
+        },
+        "teacher_code": {
+          "aprime_s100": 0.5684968301144725,
+          "full_s100": 0.9704650730072851,
+          "m48_s100": 0.963663386524616,
+          "recovery_m48_s100": 0.9108580816289508,
+          "teacher_code": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "aprime_s100": 93.08088510592884,
+        "full_s100": 99.31423430199114,
+        "m48_s100": 94.67748641306875,
+        "recovery_m48_s100": 95.27663800504321,
+        "teacher_code": 87.415297820712
+      },
+      "positions": 10667,
+      "scalar_fit_against_reference": {
+        "aprime_s100": {
+          "cosine": 0.5684968301144724,
+          "norm_over_reference": 1.06481230890315,
+          "residual_over_reference": 0.8760055964329689,
+          "residual_over_self": 0.822685452739865,
+          "scale": 0.6053424222783133
+        },
+        "full_s100": {
+          "cosine": 0.9704650730072851,
+          "norm_over_reference": 1.1361196126756181,
+          "residual_over_reference": 0.274079389687755,
+          "residual_over_self": 0.24124166736483355,
+          "scale": 1.1025644028602521
+        },
+        "m48_s100": {
+          "cosine": 0.963663386524616,
+          "norm_over_reference": 1.083076861526588,
+          "residual_over_reference": 0.2893110514674106,
+          "residual_over_self": 0.2671195939498043,
+          "scale": 1.0437215162451645
+        },
+        "recovery_m48_s100": {
+          "cosine": 0.9108580816289508,
+          "norm_over_reference": 1.0899309432137925,
+          "residual_over_reference": 0.44983597766511013,
+          "residual_over_self": 0.4127197052858364,
+          "scale": 0.9927724080437479
+        },
+        "teacher_code": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.8616569169350591,
+        "labels": [
+          "teacher_code",
+          "aprime_s100",
+          "m48_s100",
+          "full_s100",
+          "recovery_m48_s100"
+        ],
+        "participation_ratio": 1.324338933904509,
+        "second_over_first_singular": 0.35862524383485656,
+        "singular_values": [
+          195.17705339845807,
+          69.99541836599084,
+          27.83285766603762,
+          16.60793906653191,
+          12.897069891582527
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "aprime_s100": {
+            "aprime_s100": 1.0000000000000002,
+            "full_s100": 0.21535045032517205,
+            "m48_s100": 0.23667972668841472,
+            "recovery_m48_s100": 0.4551652755649404
+          },
+          "full_s100": {
+            "aprime_s100": 0.21535045032517205,
+            "full_s100": 1.0000000000000002,
+            "m48_s100": 0.6680103001825666,
+            "recovery_m48_s100": 0.3966634207150267
+          },
+          "m48_s100": {
+            "aprime_s100": 0.23667972668841472,
+            "full_s100": 0.6680103001825666,
+            "m48_s100": 1.0,
+            "recovery_m48_s100": 0.6288107379971697
+          },
+          "recovery_m48_s100": {
+            "aprime_s100": 0.4551652755649404,
+            "full_s100": 0.3966634207150267,
+            "m48_s100": 0.6288107379971697,
+            "recovery_m48_s100": 1.0
+          }
+        },
+        "residual_norm": {
+          "aprime_s100": 76.57629010479843,
+          "full_s100": 23.958731476074046,
+          "m48_s100": 25.290211726847033,
+          "recovery_m48_s100": 39.322545958066755
+        },
+        "residual_over_self": {
+          "aprime_s100": 0.822685452739865,
+          "full_s100": 0.24124166736483313,
+          "m48_s100": 0.2671195939498043,
+          "recovery_m48_s100": 0.4127197052858364
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.73950291551785,
+          "labels": [
+            "aprime_s100",
+            "m48_s100",
+            "full_s100",
+            "recovery_m48_s100"
+          ],
+          "participation_ratio": 1.7138475321021942,
+          "second_over_first_singular": 0.4939818978965114,
+          "singular_values": [
+            79.85818688534304,
+            39.448498720196056,
+            22.870761155662723,
+            12.931383152580306
+          ]
+        },
+        "teacher_label": "teacher_code"
+      }
+    },
+    "livecodebench_v6": {
+      "cosine": {
+        "aprime_s100": {
+          "aprime_s100": 1.0000000000000002,
+          "full_s100": 0.42969471042064167,
+          "m48_s100": 0.4780608665686935,
+          "recovery_m48_s100": 0.5096726423695704,
+          "teacher_code": 0.38754747236358444
+        },
+        "full_s100": {
+          "aprime_s100": 0.42969471042064167,
+          "full_s100": 1.0,
+          "m48_s100": 0.9726381986819639,
+          "recovery_m48_s100": 0.9458674367934623,
+          "teacher_code": 0.975148584087552
+        },
+        "m48_s100": {
+          "aprime_s100": 0.4780608665686935,
+          "full_s100": 0.9726381986819639,
+          "m48_s100": 1.0000000000000002,
+          "recovery_m48_s100": 0.9673951956967647,
+          "teacher_code": 0.956603669190149
+        },
+        "recovery_m48_s100": {
+          "aprime_s100": 0.5096726423695704,
+          "full_s100": 0.9458674367934623,
+          "m48_s100": 0.9673951956967647,
+          "recovery_m48_s100": 1.0,
+          "teacher_code": 0.9315841444388733
+        },
+        "teacher_code": {
+          "aprime_s100": 0.38754747236358444,
+          "full_s100": 0.975148584087552,
+          "m48_s100": 0.956603669190149,
+          "recovery_m48_s100": 0.9315841444388733,
+          "teacher_code": 1.0
+        }
+      },
+      "norms": {
+        "aprime_s100": 62.49168264987701,
+        "full_s100": 88.7284283341254,
+        "m48_s100": 88.37840122565832,
+        "recovery_m48_s100": 82.25895275749096,
+        "teacher_code": 80.10191670922578
+      },
+      "positions": 11138,
+      "scalar_fit_against_reference": {
+        "aprime_s100": {
+          "cosine": 0.38754747236358444,
+          "norm_over_reference": 0.7801521513739197,
+          "residual_over_reference": 0.7191830636281713,
+          "residual_over_self": 0.9218497473366236,
+          "scale": 0.30234599432397513
+        },
+        "full_s100": {
+          "cosine": 0.975148584087552,
+          "norm_over_reference": 1.1076941973338081,
+          "residual_over_reference": 0.24541174043516287,
+          "residual_over_self": 0.221551887719429,
+          "scale": 1.0801664281320604
+        },
+        "m48_s100": {
+          "cosine": 0.956603669190149,
+          "norm_over_reference": 1.10332442538768,
+          "residual_over_reference": 0.3215001427425953,
+          "residual_over_self": 0.29139221007422944,
+          "scale": 1.0554441936329675
+        },
+        "recovery_m48_s100": {
+          "cosine": 0.9315841444388733,
+          "norm_over_reference": 1.026928644617773,
+          "residual_over_reference": 0.3733150211509895,
+          "residual_over_self": 0.36352576501548356,
+          "scale": 0.9566704427960196
+        },
+        "teacher_code": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.8821667716466333,
+        "labels": [
+          "teacher_code",
+          "aprime_s100",
+          "m48_s100",
+          "full_s100",
+          "recovery_m48_s100"
+        ],
+        "participation_ratio": 1.2702524083215692,
+        "second_over_first_singular": 0.32597652468390714,
+        "singular_values": [
+          170.02929859290302,
+          55.42555984975687,
+          21.017745822467493,
+          14.302828785683209,
+          11.96941736791406
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "aprime_s100": {
+            "aprime_s100": 0.9999999999999999,
+            "full_s100": 0.253520182961041,
+            "m48_s100": 0.39956666799123763,
+            "recovery_m48_s100": 0.44354642029534
+          },
+          "full_s100": {
+            "aprime_s100": 0.253520182961041,
+            "full_s100": 1.0000000000000002,
+            "m48_s100": 0.6166111156427765,
+            "recovery_m48_s100": 0.4647946522607388
+          },
+          "m48_s100": {
+            "aprime_s100": 0.39956666799123763,
+            "full_s100": 0.6166111156427765,
+            "m48_s100": 1.0,
+            "recovery_m48_s100": 0.719714998384486
+          },
+          "recovery_m48_s100": {
+            "aprime_s100": 0.44354642029534,
+            "full_s100": 0.4647946522607388,
+            "m48_s100": 0.719714998384486,
+            "recovery_m48_s100": 0.9999999999999999
+          }
+        },
+        "residual_norm": {
+          "aprime_s100": 57.607941861429595,
+          "full_s100": 19.65795079180355,
+          "m48_s100": 25.752777655971567,
+          "recovery_m48_s100": 29.903248730539406
+        },
+        "residual_over_self": {
+          "aprime_s100": 0.9218497473366237,
+          "full_s100": 0.22155188771942896,
+          "m48_s100": 0.29139221007422944,
+          "recovery_m48_s100": 0.3635257650154834
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.7156366535552048,
+          "labels": [
+            "aprime_s100",
+            "m48_s100",
+            "full_s100",
+            "recovery_m48_s100"
+          ],
+          "participation_ratio": 1.7987605338544221,
+          "second_over_first_singular": 0.5283849466908935,
+          "singular_values": [
+            61.368168337072895,
+            32.42601635530204,
+            16.96305492380428,
+            12.54097214778841
+          ]
+        },
+        "teacher_label": "teacher_code"
+      }
+    },
+    "math": {
+      "cosine": {
+        "aprime_s100": {
+          "aprime_s100": 1.0,
+          "full_s100": 0.392052706873723,
+          "m48_s100": 0.4356317037647885,
+          "recovery_m48_s100": 0.5275197899856792,
+          "teacher_code": 0.22157992519753963
+        },
+        "full_s100": {
+          "aprime_s100": 0.392052706873723,
+          "full_s100": 0.9999999999999998,
+          "m48_s100": 0.981509909022128,
+          "recovery_m48_s100": 0.9462877559275698,
+          "teacher_code": 0.8917541759430673
+        },
+        "m48_s100": {
+          "aprime_s100": 0.4356317037647885,
+          "full_s100": 0.981509909022128,
+          "m48_s100": 1.0,
+          "recovery_m48_s100": 0.9616612834125757,
+          "teacher_code": 0.8825961446272879
+        },
+        "recovery_m48_s100": {
+          "aprime_s100": 0.5275197899856792,
+          "full_s100": 0.9462877559275698,
+          "m48_s100": 0.9616612834125757,
+          "recovery_m48_s100": 0.9999999999999999,
+          "teacher_code": 0.8384141460404989
+        },
+        "teacher_code": {
+          "aprime_s100": 0.22157992519753963,
+          "full_s100": 0.8917541759430673,
+          "m48_s100": 0.8825961446272879,
+          "recovery_m48_s100": 0.8384141460404989,
+          "teacher_code": 1.0000000000000002
+        }
+      },
+      "norms": {
+        "aprime_s100": 98.68495616011305,
+        "full_s100": 69.20066727206547,
+        "m48_s100": 74.32776445069233,
+        "recovery_m48_s100": 79.11576468323726,
+        "teacher_code": 34.18861656803987
+      },
+      "positions": 28535,
+      "scalar_fit_against_reference": {
+        "aprime_s100": {
+          "cosine": 0.2215799251975396,
+          "norm_over_reference": 2.886485797508563,
+          "residual_over_reference": 2.814734150114484,
+          "residual_over_self": 0.9751422136024328,
+          "scale": 0.6395873070957079
+        },
+        "full_s100": {
+          "cosine": 0.8917541759430673,
+          "norm_over_reference": 2.0240850381982254,
+          "residual_over_reference": 0.9159392729975635,
+          "residual_over_self": 0.45252015390267536,
+          "scale": 1.8049862852771505
+        },
+        "m48_s100": {
+          "cosine": 0.8825961446272879,
+          "norm_over_reference": 2.1740500760763526,
+          "residual_over_reference": 1.022090390283489,
+          "residual_over_self": 0.4701319447655599,
+          "scale": 1.9188082153716506
+        },
+        "recovery_m48_s100": {
+          "cosine": 0.8384141460404989,
+          "norm_over_reference": 2.3140966972379946,
+          "residual_over_reference": 1.2612606544486944,
+          "residual_over_self": 0.5450336867746626,
+          "scale": 1.9401714062699322
+        },
+        "teacher_code": {
+          "cosine": 1.0,
+          "norm_over_reference": 1.0,
+          "residual_over_reference": 0.0,
+          "residual_over_self": 0.0,
+          "scale": 1.0
+        }
+      },
+      "spectrum": {
+        "first_energy_fraction": 0.7389193204000084,
+        "labels": [
+          "teacher_code",
+          "aprime_s100",
+          "m48_s100",
+          "full_s100",
+          "recovery_m48_s100"
+        ],
+        "participation_ratio": 1.6542292807683736,
+        "second_over_first_singular": 0.5717833883337492,
+        "singular_values": [
+          142.497988512206,
+          81.47798270225282,
+          16.342761850633057,
+          13.548062791213171,
+          9.233685621430423
+        ]
+      },
+      "teacher_orthogonal": {
+        "residual_cosine": {
+          "aprime_s100": {
+            "aprime_s100": 1.0,
+            "full_s100": 0.4406762758459761,
+            "m48_s100": 0.5236524587573318,
+            "recovery_m48_s100": 0.6429980478033354
+          },
+          "full_s100": {
+            "aprime_s100": 0.4406762758459761,
+            "full_s100": 1.0,
+            "m48_s100": 0.9140137764502275,
+            "recovery_m48_s100": 0.8053416500349366
+          },
+          "m48_s100": {
+            "aprime_s100": 0.5236524587573318,
+            "full_s100": 0.9140137764502275,
+            "m48_s100": 1.0000000000000002,
+            "recovery_m48_s100": 0.8651347937708216
+          },
+          "recovery_m48_s100": {
+            "aprime_s100": 0.6429980478033354,
+            "full_s100": 0.8053416500349366,
+            "m48_s100": 0.8651347937708216,
+            "recovery_m48_s100": 1.0000000000000002
+          }
+        },
+        "residual_norm": {
+          "aprime_s100": 96.23186659923168,
+          "full_s100": 31.314696604122894,
+          "m48_s100": 34.94385645128043,
+          "recovery_m48_s100": 43.12075690730145
+        },
+        "residual_over_self": {
+          "aprime_s100": 0.9751422136024329,
+          "full_s100": 0.4525201539026753,
+          "m48_s100": 0.4701319447655599,
+          "recovery_m48_s100": 0.5450336867746626
+        },
+        "residual_spectrum": {
+          "first_energy_fraction": 0.8189152871394619,
+          "labels": [
+            "aprime_s100",
+            "m48_s100",
+            "full_s100",
+            "recovery_m48_s100"
+          ],
+          "participation_ratio": 1.4381458011456987,
+          "second_over_first_singular": 0.4364154271115286,
+          "singular_values": [
+            104.44762828520537,
+            45.582556308874075,
+            15.787976783999216,
+            9.236798554621602
+          ]
+        },
+        "teacher_label": "teacher_code"
+      }
+    }
+  },
+  "inputs": {
+    "anchor_base_score": {
+      "checkpoint": {
+        "fingerprint": "97fb23f1860189c17bb5f709a28b6204abef6052c589b9641abcc1b74d11d856",
+        "path": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b"
+      },
+      "label": "base_fp32",
+      "log_probability_shift_rms": 0.17141302653790275,
+      "path": "results/analysis/qwen3_4b_functional_geometry_v3/scores/base_fp32.npz",
+      "sha256": "d6ed3bec8740edefcb42e2b3ca89f9e67e3550de921a9c744449301dc4f39d5a"
+    },
+    "reference": {
+      "cohort": {
+        "manifest_path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/manifest.json",
+        "manifest_sha256": "92d69cddae15b8bbeb61b6ef6648791e590d4b91dd5c0279d6319db7b39fa88c",
+        "path": "/path/to/opd-code/data/opd/function_space_geometry_v2/cohort/cohort.jsonl",
+        "sha256": "dea3595a71944288594453b0b57826ad8b3be4c7feda102b3c7a7ba325ab908e"
+      },
+      "path": "results/analysis/qwen3_4b_functional_geometry_v2/function_space/fisher_k128/base_topk.npz",
+      "sha256": "b19cee442036991691c747d75b1c465416f66e430bcdc2ace8f8840421ed9504",
+      "top_k": 128
+    },
+    "reference_label": "teacher_code",
+    "scores": {
+      "aprime_s100": {
+        "checkpoint": {
+          "fingerprint": "498c8de53d8de298638f22bbd209a229b8c64743f0c37cfa4c6465b3eb814d1a",
+          "path": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_aprime_v1/train_b256_s100/seed_42/index_15240/merged_hf/step_100"
+        },
+        "path": "results/analysis/qwen3_4b_code_aprime_trajectory_geometry_v1/scores/aprime_s100.npz",
+        "sha256": "ac124556723b1e5e4b36372c3b002e11e43a6d69951aefc3b4630c6a37baca26"
+      },
+      "full_s100": {
+        "checkpoint": {
+          "fingerprint": "a8dd3e0745698660a9168b833c5aa3d59e8f2bb54f9cb5533e9b1d078c9f07ad",
+          "path": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_diversity_b256_s100_v1/train_b256_s100/seed_42/support_22618/merged_hf/step_100"
+        },
+        "path": "results/analysis/qwen3_4b_code_aprime_trajectory_geometry_v1/scores/full_s100.npz",
+        "sha256": "baee193e21cbe793617ffdc16f62f2883e13d2330a27e1b03f2bb78b0d93d296"
+      },
+      "m48_s100": {
+        "checkpoint": {
+          "fingerprint": "4bf32f0fc96cabbe6eaf58154694cbfc4d9fb63ac3fae4c47686b858b3948d04",
+          "path": "/path/to/opd-code/results/opd/qwen3_4b_code_grpo300_diversity_b256_s100_v1/train_b256_s100/seed_42/support_48/merged_hf/step_100"
+        },
+        "path": "results/analysis/qwen3_4b_code_aprime_trajectory_geometry_v1/scores/m48_s100.npz",
+        "sha256": "f483a8b58fa9929f2bcce1edfc6ea618954ea36ddf1d9272dbd75bfd1d868896"
+      },
+      "recovery_m48_s100": {
+        "checkpoint": {
+          "fingerprint": "5351b4a8987c26b096d1c1312fc436066fbbb0328a4b7115dfa4c7085d372d79",
+          "path": "/path/to/opd-code/results/opd/qwen3_4b_code_aprime_to_m48_recovery_b256_s100_v1/train_b256_s100/seed_42/recovery/merged_hf/step_100"
+        },
+        "path": "results/analysis/qwen3_4b_code_aprime_to_m48_recovery_v1/recovery_m48_s100.npz",
+        "sha256": "043b38eba3eb2c7894ea0c0f70e612e83dd00d3baf386a32819a47d197305a09"
+      },
+      "teacher_code": {
+        "checkpoint": {
+          "fingerprint": "229b38034ddc5615a9eccfad6305480b2138b14459028efd70eb1dc03f5fc002",
+          "path": "/path/to/opd-code/data/models/opd_qwen3_4b_code_grpo300/teacher_qwen3_4b_code_grpo_step300"
+        },
+        "path": "results/analysis/qwen3_4b_code_aprime_trajectory_geometry_v1/scores/teacher_code.npz",
+        "sha256": "4d8e5c507623ab7c55289c4eba472a3c010577085833ffde83aa956192f365d9"
+      }
+    },
+    "subspace_labels": [
+      "teacher_code",
+      "aprime_s100",
+      "m48_s100",
+      "full_s100",
+      "recovery_m48_s100"
+    ]
+  },
+  "representation": "centered top-K Fisher vector, identical to fisher_centered_vector; all quantities are exact functions of the Gram matrix of the full flattened vectors, not of any per-probe scalar reduction",
+  "schema_version": "opd_endpoint_collinearity_v1"
+}

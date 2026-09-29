@@ -1,0 +1,37 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/student_qwen3_4b",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_code": 0.009630203332931828,
+    "teacher_vs_long": 0.07195244761357197,
+    "teacher_vs_m48": 0.09289843383045715,
+    "teacher_vs_science": 0.02659012384229681,
+    "teacher_vs_short": 0.07051004705942099
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "code": "/path/to/opd-code/results/opd/qwen3_4b_m1_domain_signal_v1/train_b256_s15/seed_42/code/merged_hf/step_15",
+    "long": "/path/to/opd-code/results/opd/qwen3_4b_m1_domain_signal_v1/train_b256_s15/seed_42/math_long/merged_hf/step_15",
+    "m48": "/path/to/opd-code/results/opd/qwen3_4b_math_m48_budget_break_b256_s15_v1/train_b256_s15/seed_42/support_48/merged_hf/step_15",
+    "science": "/path/to/opd-code/results/opd/qwen3_4b_m1_domain_signal_v1/train_b256_s15/seed_42/science/merged_hf/step_15",
+    "short": "/path/to/opd-code/results/opd/qwen3_4b_m1_domain_signal_v1/train_b256_s15/seed_42/math_short/merged_hf/step_15",
+    "teacher": "/path/to/opd-code/data/models/opd_qwen3_4b_t_grpo500/teacher_grpo_step500"
+  },
+  "norms": {
+    "code": 2.1454728326859027,
+    "long": 2.2772583347025632,
+    "m48": 2.533403164640854,
+    "science": 2.086868505027979,
+    "short": 2.1871288453095925,
+    "teacher": 0.7982129937489734
+  },
+  "parameter_count": 4022468096,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

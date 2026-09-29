@@ -1,0 +1,2 @@
+rank,item_sha256,prompt_sha256,data_source,source_index,source_split,first_position,count
+0,1ca76bdf19e9805e77687af3d71edbd8d93e9f071b71bdcd2e646d94de23a2d8,21c63e69352f42e7ad4f6d9f4f635eaf1a4bd8c7f21d69a9322c8bb84b49e892,DeepMath-103K,2698,train,0,25600

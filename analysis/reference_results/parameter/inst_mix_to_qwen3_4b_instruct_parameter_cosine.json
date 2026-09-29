@@ -1,0 +1,43 @@
+{
+  "base": "/path/to/opd-code/data/models/opd_qwen3_4b_inst_mix/student_qwen3_4b_instruct_2507",
+  "computation": {
+    "all_parameters": true,
+    "device": "cuda:0",
+    "product_dtype": "float32",
+    "same_weights_as_functional_forward": true,
+    "scalar_accumulation": "float64",
+    "tf32_allowed": false
+  },
+  "cosines": {
+    "teacher_vs_agent": 0.02395278186269411,
+    "teacher_vs_code": 0.05359614175120559,
+    "teacher_vs_deepmath": 0.05531605354257395,
+    "teacher_vs_if": 0.016276165556568415,
+    "teacher_vs_mix": 0.05254261869502451,
+    "teacher_vs_mix5domain": 0.05735046307938351,
+    "teacher_vs_science": 0.047505764181732385
+  },
+  "definition": "endpoint HF weights minus the same Initial HF weights",
+  "endpoints": {
+    "agent": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_agent48/merged_hf/step_25",
+    "code": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_code48/merged_hf/step_25",
+    "deepmath": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_math48/merged_hf/step_25",
+    "if": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_if48/merged_hf/step_25",
+    "mix": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_mix48/merged_hf/step_25",
+    "mix5domain": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_mix5domain48/merged_hf/step_25",
+    "science": "/path/to/opd-code/results/opd/qwen3_4b_inst_mix_teacher_pool_m48_b256_s25_v1/seed_42/mixT_science48/merged_hf/step_25",
+    "teacher": "/path/to/opd-code/data/models/opd_qwen3_4b_inst_mix/teacher_qwen3_4b_inst_mix"
+  },
+  "norms": {
+    "agent": 2.7619356723361026,
+    "code": 2.267801652973399,
+    "deepmath": 2.1864310235875264,
+    "if": 3.1863849860825786,
+    "mix": 2.532855455912426,
+    "mix5domain": 2.8359643777450034,
+    "science": 2.6279551170511506,
+    "teacher": 1.4016046276640552
+  },
+  "parameter_count": 4022468096,
+  "schema_version": "opd_hf_task_vector_cosine_v1"
+}

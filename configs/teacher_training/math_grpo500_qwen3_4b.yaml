@@ -1,0 +1,41 @@
+name: math_grpo500_qwen3_4b
+group: teacher_training
+driver: models/teacher_training/train_grpo.sh
+note: Math GRPO-500 teacher. GRPO on Qwen3-4B (non-thinking) over DeepMath-103K difficulty >= 6.
+env:
+  MODEL: ${MODEL_ROOT}/qwen3_4b
+  TRAIN_FILE: ${REPO_ROOT}/data/pools/deepmath_l6.parquet
+  VAL_FILES: ${REPO_ROOT}/data/val/aime24.parquet,${REPO_ROOT}/data/val/aime25.parquet
+  REWARD_FN: ${REPO_ROOT}/opd/rewards/math_reward.py
+  REWARD_FN_NAME: compute_score
+  OUTPUT_DIR: ${OUTPUT_ROOT}/teacher_training/math_grpo500_qwen3_4b
+  TRAIN_BATCH_SIZE: '128'
+  PPO_MINI_BATCH_SIZE: '128'
+  ROLLOUT_N: '8'
+  ACTOR_LR: 1e-6
+  KL_LOSS_COEF: '0.0'
+  USE_KL_LOSS: 'False'
+  MAX_PROMPT_LENGTH: '2048'
+  MAX_RESPONSE_LENGTH: '16384'
+  ROLLOUT_TEMPERATURE: '1.0'
+  ROLLOUT_TOP_P: '1.0'
+  ROLLOUT_TP: '4'
+  ROLLOUT_GPU_MEMORY_UTILIZATION: '0.6'
+  ROLLOUT_MAX_NUM_BATCHED_TOKENS: '32768'
+  PPO_MAX_TOKEN_LEN_PER_GPU: '32768'
+  LOG_PROB_MAX_TOKEN_LEN_PER_GPU: '32768'
+  ROLLOUT_IS: token
+  ROLLOUT_IS_THRESHOLD: '5.0'
+  ROLLOUT_BYPASS_MODE: 'false'
+  TOTAL_TRAINING_STEPS: '500'
+  TOTAL_EPOCHS: '2'
+  DATA_SEED: '42'
+  VAL_N: '4'
+  SAVE_FREQ: '50'
+  TEST_FREQ: '50'
+  VAL_BEFORE_TRAIN: 'True'
+  LOG_VAL_GENERATIONS: '10'
+  RESUME_MODE: auto
+  NNODES: '2'
+  NPROC_PER_NODE: '8'
+  WANDB_EXPERIMENT: qwen3-4b-nothink-gopd-deepmath-l6-bsz128-n8-lr1e-6
