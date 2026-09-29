@@ -86,6 +86,22 @@ Full list with M, steps, batch and seeds: [`configs/INDEX.md`](configs/INDEX.md)
 
 Methods: [`data_prep/selection/`](data_prep/selection/).
 
+## 🎓 Teacher training
+
+The teachers trained for the paper (Math GRPO-500, Code GRPO-300, Code GRPO-400) and the Qwen3-1.7B-Base SFT-554 student are on [Hugging Face](https://huggingface.co/wyy1112/OPD-Models); to retrain them:
+
+```bash
+python data_prep/build_eurus_code_pool.py      # Code GRPO-300 data
+python data_prep/build_sft_code_data.py        # SFT data
+
+python opd/run.py configs/teacher_training/math_grpo500_qwen3_4b.yaml --gpus 8
+python opd/run.py configs/teacher_training/code_grpo300_qwen3_4b.yaml --gpus 8
+python opd/run.py configs/teacher_training/qwen3_1p7b_base_sft554.yaml --gpus 8
+python opd/run.py configs/teacher_training/code_grpo400_qwen3_1p7b.yaml --gpus 8
+```
+
+Recipes and data: [`models/teacher_training/`](models/teacher_training/).
+
 ## 🔍 Mechanism analysis
 
 | | Metrics | Code |
